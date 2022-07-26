@@ -131,8 +131,9 @@
  }
 
  .title {
-    font-size: var(--fs-700);
+    font-size: var(--fs-800);
     background-color: transparent;
+    padding: 4rem;
  }
 
  main {
