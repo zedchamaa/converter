@@ -1,7 +1,7 @@
 :root {  
     --clr-primary-400: hsl(182, 83%, 45%);
     --clr-secondary-100: hsl(0, 0%, 50%);
-    --ff-primary: 'Be Vietnam Pro', sans-serif;
+    --ff-primary: 'JetBrains Mono', monospace;
   
   /* ff means font family */
     --ff-body: var(--ff-primary);
@@ -85,6 +85,7 @@
   body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    font-family: var(--ff-primary);
   }
   
   /* A elements that don't have a class get default styles */
