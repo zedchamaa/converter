@@ -24,7 +24,7 @@ class MyFooter extends HTMLElement {
     }
 }
 
-customElements.define("my-footer", MyFooter)
+customElements.define("my-footer", MyFooter);
 
 // Centrally control the navigation for all pages
 
@@ -43,4 +43,25 @@ class MyNav extends HTMLElement {
     }
 }
 
-customElements.define("my-nav", MyNav)
+customElements.define("my-nav", MyNav);
+
+// Centrally control the clear all button for all pages
+
+class ClearAll extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+            <button>Clear All</button>
+        `
+    }
+}
+
+customElements.define("clear-all", ClearAll);
+
+// Clear input fields when "Clear All" button is clicked
+
+let btnClear = document.querySelector("button");
+let inputs = document.querySelectorAll("input");
+
+btnClear.addEventListener("click", () => {
+    inputs.forEach(input => input.value = "");
+});
