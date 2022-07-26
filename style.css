@@ -190,3 +190,9 @@
     color: var(--clr-secondary-100);
     font-size: var(--fs-300);
  }
+
+ button {
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-bottom: 2rem;
+ }
