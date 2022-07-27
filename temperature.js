@@ -1,3 +1,5 @@
+// ========== CONVERSIONS FROM CELSIUS TO OTHER UNITS ========== //
+
 // Trigger the convert from Celsius functions upon data input
 const celsiusElement = document.getElementById("celsius");
 celsiusElement.addEventListener('input', (event) => { 
@@ -5,24 +7,6 @@ celsiusElement.addEventListener('input', (event) => {
   let celsius = target.value;
   convertCelsiusFahrenheit(celsius);
   convertCelsiusKelvin(celsius);
-});
-
-// Trigger the convert from Fahrenheit functions upon data input
-const fahrenheitElement = document.getElementById("fahrenheit");
-fahrenheitElement.addEventListener('input', (event) => { 
-  const { target } = event; 
-  let fahrenheit = target.value;
-  convertFahrenheitCelsius(fahrenheit);
-  convertFahrenheitKelvin(fahrenheit);
-});
-
-// Trigger the convert from Kelvin functions upon data input
-const kelvinElement = document.getElementById("kelvin");
-kelvinElement.addEventListener('input', (event) => { 
-  const { target } = event; 
-  let kelvin = target.value;
-  convertKelvinCelsius(kelvin);
-  convertKelvinFahrenheit(kelvin);
 });
 
 // Convert Celsius to Fahrenheit
@@ -41,6 +25,17 @@ function convertCelsiusKelvin(celsius) {
   celsiusKelvinElement.value = celsiusKelvin;
 }
 
+// ========== CONVERSIONS FROM FAHRENHEIT TO OTHER UNITS ========== //
+
+// Trigger the convert from Fahrenheit functions upon data input
+const fahrenheitElement = document.getElementById("fahrenheit");
+fahrenheitElement.addEventListener('input', (event) => { 
+  const { target } = event; 
+  let fahrenheit = target.value;
+  convertFahrenheitCelsius(fahrenheit);
+  convertFahrenheitKelvin(fahrenheit);
+});
+
 // Convert Fahrenheit to Celsius
 function convertFahrenheitCelsius(fahrenheit) {
   let fahrenheitCelsiusElement = document.getElementById("celsius");
@@ -56,6 +51,17 @@ function convertFahrenheitKelvin(fahrenheit) {
   fahrenheitKelvin = Number(fahrenheitKelvin.toFixed(2));
   fahrenheitKelvinElement.value = fahrenheitKelvin;
 }
+
+// ========== CONVERSIONS FROM KELVIN TO OTHER UNITS ========== //
+
+// Trigger the convert from Kelvin functions upon data input
+const kelvinElement = document.getElementById("kelvin");
+kelvinElement.addEventListener('input', (event) => { 
+  const { target } = event; 
+  let kelvin = target.value;
+  convertKelvinCelsius(kelvin);
+  convertKelvinFahrenheit(kelvin);
+});
 
 // Convert Kelvin to Celsius
 function convertKelvinCelsius(kelvin) {
