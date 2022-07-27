@@ -1,6 +1,6 @@
-//==========CONVERSIONS FROM CUBIC METER==========//
+// ========== CONVERSIONS FROM CUBIC METER TO OTHER UNITS ========== //
 
-// Trigger the convert from cubic meter functions upon data input
+// Trigger the convert from Cubic Meter functions upon data input
 const cubicMeterElement = document.getElementById("cubic-meter");
 cubicMeterElement.addEventListener('input', (event) => { 
   const { target } = event;
@@ -10,7 +10,7 @@ cubicMeterElement.addEventListener('input', (event) => {
   convertCubicMeterToMilliliter(cubicMeter);
 });
 
-// Convert Cubic meter to Liter
+// Convert Cubic Meter to Liter
 function convertCubicMeterToLiter(cubicMeter) {
   let cubicMeterLiterElement = document.getElementById("liter");
   let cubicMeterLiter = cubicMeter * 1000;
@@ -18,7 +18,7 @@ function convertCubicMeterToLiter(cubicMeter) {
   cubicMeterLiterElement.value = cubicMeterLiter;
 }
 
-// Convert Cubic meter to Cubic cm
+// Convert Cubic Meter to Cubic Centimeter
 function convertCubicMeterToCubicCm(cubicMeter) {
   let cubicMeterCubicCmElement = document.getElementById("cubic-centimeter");
   let cubicMeterCubicCm = cubicMeter * 1000000;
@@ -26,7 +26,7 @@ function convertCubicMeterToCubicCm(cubicMeter) {
   cubicMeterCubicCmElement.value = cubicMeterCubicCm;
 }
 
-// Convert Cubic meter to Milliliter
+// Convert Cubic Meter to Milliliter
 function convertCubicMeterToMilliliter(cubicMeter) {
   let cubicMeterMilliliterElement = document.getElementById("milliliter");
   let cubicMeterMilliliter = cubicMeter * 1000000;
@@ -34,9 +34,9 @@ function convertCubicMeterToMilliliter(cubicMeter) {
   cubicMeterMilliliterElement.value = cubicMeterMilliliter;
 }
 
-//==========CONVERSIONS FROM LITER==========//
+// ========== CONVERSIONS FROM LITER TO OTHER UNITS ========== //
 
-// Trigger the convert from liter functions upon data input
+// Trigger the convert from Liter functions upon data input
 const literElement = document.getElementById("liter");
 literElement.addEventListener('input', (event) => { 
   const { target } = event;
@@ -46,7 +46,7 @@ literElement.addEventListener('input', (event) => {
   convertLiterToMilliliter(liter);
 });
 
-// Convert from Liter to Cubic meter
+// Convert from Liter to Cubic Meter
 function convertLiterToCubicMeter(liter) {
   let literCubicMeterElement = document.getElementById("cubic-meter");
   let literCubicMeter = liter / 1000;
@@ -54,7 +54,7 @@ function convertLiterToCubicMeter(liter) {
   literCubicMeterElement.value = literCubicMeter;
 }
 
-// Convert Liter to Cubic cm
+// Convert Liter to Cubic Centimeter
 function convertLiterToCubicCm(liter) {
   let literCubicCmElement = document.getElementById("cubic-centimeter");
   let literCubicCm = liter * 1000;
@@ -68,4 +68,76 @@ function convertLiterToMilliliter(liter) {
   let literMilliliter = liter * 1000;
   literMilliliter = Number(literMilliliter.toFixed(2));
   literMilliliterElement.value = literMilliliter;
+}
+
+// ========== CONVERSIONS FROM CUBIC CM TO OTHER UNITS ========== //
+
+// Trigger the convert from Cubic Centimeter functions upon data input
+const cubicCmElement = document.getElementById("cubic-centimeter");
+cubicCmElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let cubicCm = target.value;
+  convertCubicCmToCubicMeter(cubicCm);
+  convertCubicCmToLiter(cubicCm);
+  convertCubicCmToMilliliter(cubicCm);
+});
+
+// Convert from Cubic Centimeter to Cubic Meter
+function convertCubicCmToCubicMeter(cubicCm) {
+  let cubicCmCubicMeterElement = document.getElementById("cubic-meter");
+  let cubicCmCubicMeter = cubicCm / 1000000;
+  cubicCmCubicMeter = Number(cubicCmCubicMeter.toFixed(10));
+  cubicCmCubicMeterElement.value = cubicCmCubicMeter;
+}
+
+// Convert Cubic Centimeter to Liter
+function convertCubicCmToLiter(cubicCm) {
+  let cubicCmLiterElement = document.getElementById("liter");
+  let cubicCmLiter = cubicCm / 1000;
+  cubicCmLiter = Number(cubicCmLiter.toFixed(10));
+  cubicCmLiterElement.value = cubicCmLiter;
+}
+
+// Convert Cubic Centimeter to Milliliter
+function convertCubicCmToMilliliter(cubicCm) {
+  let cubicCmMilliliterElement = document.getElementById("milliliter");
+  let cubicCmMilliliter = cubicCm * 1;
+  cubicCmMilliliter = Number(cubicCmMilliliter.toFixed(10));
+  cubicCmMilliliterElement.value = cubicCmMilliliter;
+}
+
+// ========== CONVERSIONS FROM MILLILITER TO OTHER UNITS ========== //
+
+// Trigger the convert from Milliliter functions upon data input
+const milliliterElement = document.getElementById("milliliter");
+milliliterElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let milliliter = target.value;
+  convertMilliliterToCubicMeter(milliliter);
+  convertMilliliterToLiter(milliliter);
+  convertMilliliterToCubicCm(milliliter);
+});
+
+// Convert from Milliliter to Cubic Meter
+function convertMilliliterToCubicMeter(milliliter) {
+  let milliliterCubicMeterElement = document.getElementById("cubic-meter");
+  let milliliterCubicMeter = milliliter / 1000000;
+  milliliterCubicMeter = Number(milliliterCubicMeter.toFixed(10));
+  milliliterCubicMeterElement.value = milliliterCubicMeter;
+}
+
+// Convert Milliliter to Liter
+function convertMilliliterToLiter(milliliter) {
+  let milliliterLiterElement = document.getElementById("liter");
+  let milliliterLiter = milliliter / 1000;
+  milliliterLiter = Number(milliliterLiter.toFixed(10));
+  milliliterLiterElement.value = milliliterLiter;
+}
+
+// Convert Milliliter to Cubic Centimeter
+function convertMilliliterToCubicCm(milliliter) {
+  let milliliterCubicCmElement = document.getElementById("cubic-centimeter");
+  let milliliterCubicCm = milliliter * 1;
+  milliliterCubicCm = Number(milliliterCubicCm.toFixed(10));
+  milliliterCubicCmElement.value = milliliterCubicCm;
 }
