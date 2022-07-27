@@ -11,7 +11,7 @@ celsiusElement.addEventListener('input', (event) => {
 
 // Convert Celsius to Fahrenheit
 function convertCelsiusFahrenheit(celsius) {
-  let celsiusFahrenheitElement = document.getElementById("fahrenheit");
+  const celsiusFahrenheitElement = document.getElementById("fahrenheit");
   let celsiusFahrenheit = celsius * 9/5 + 32;
   celsiusFahrenheit = Number(celsiusFahrenheit.toFixed(2));
   celsiusFahrenheitElement.value = celsiusFahrenheit;
@@ -19,7 +19,7 @@ function convertCelsiusFahrenheit(celsius) {
 
 // Convert Celsius to Kelvin
 function convertCelsiusKelvin(celsius) {
-  let celsiusKelvinElement = document.getElementById("kelvin");
+  const celsiusKelvinElement = document.getElementById("kelvin");
   let celsiusKelvin = (celsius - 0) + 273.15;
   celsiusKelvin = Number(celsiusKelvin.toFixed(2));
   celsiusKelvinElement.value = celsiusKelvin;
@@ -38,7 +38,7 @@ fahrenheitElement.addEventListener('input', (event) => {
 
 // Convert Fahrenheit to Celsius
 function convertFahrenheitCelsius(fahrenheit) {
-  let fahrenheitCelsiusElement = document.getElementById("celsius");
+  const fahrenheitCelsiusElement = document.getElementById("celsius");
   let fahrenheitCelsius = ((fahrenheit - 32) * 5) / 9;
   fahrenheitCelsius = Number(fahrenheitCelsius.toFixed(2));
   fahrenheitCelsiusElement.value = fahrenheitCelsius;
@@ -46,7 +46,7 @@ function convertFahrenheitCelsius(fahrenheit) {
 
 // Convert Fahrenheit to Kelvin
 function convertFahrenheitKelvin(fahrenheit) {
-  let fahrenheitKelvinElement = document.getElementById("kelvin");
+  const fahrenheitKelvinElement = document.getElementById("kelvin");
   let fahrenheitKelvin = ((fahrenheit - 32) * 5/9) + 273.15;
   fahrenheitKelvin = Number(fahrenheitKelvin.toFixed(2));
   fahrenheitKelvinElement.value = fahrenheitKelvin;
@@ -65,7 +65,7 @@ kelvinElement.addEventListener('input', (event) => {
 
 // Convert Kelvin to Celsius
 function convertKelvinCelsius(kelvin) {
-  let kelvinCelsiusElement = document.getElementById("celsius");
+  const kelvinCelsiusElement = document.getElementById("celsius");
   let kelvinCelsius = kelvin - 273.15;
   kelvinCelsius = Number(kelvinCelsius.toFixed(2));
   kelvinCelsiusElement.value = kelvinCelsius;
@@ -73,7 +73,7 @@ function convertKelvinCelsius(kelvin) {
 
 // Convert Kelvin to Fahrenheit
 function convertKelvinFahrenheit(kelvin) {
-  let kelvinFahrenheitElement = document.getElementById("fahrenheit");
+  const kelvinFahrenheitElement = document.getElementById("fahrenheit");
   let kelvinFahrenheit = (kelvin - 273.15) * 9/5 + 32;
   kelvinFahrenheit = Number(kelvinFahrenheit.toFixed(2));
   kelvinFahrenheitElement.value = kelvinFahrenheit;

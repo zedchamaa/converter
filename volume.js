@@ -12,7 +12,7 @@ cubicMeterElement.addEventListener('input', (event) => {
 
 // Convert Cubic Meter to Liter
 function convertCubicMeterToLiter(cubicMeter) {
-  let cubicMeterLiterElement = document.getElementById("liter");
+  const cubicMeterLiterElement = document.getElementById("liter");
   let cubicMeterLiter = cubicMeter * 1000;
   cubicMeterLiter = Number(cubicMeterLiter.toFixed(2));
   cubicMeterLiterElement.value = cubicMeterLiter;
@@ -20,7 +20,7 @@ function convertCubicMeterToLiter(cubicMeter) {
 
 // Convert Cubic Meter to Cubic Centimeter
 function convertCubicMeterToCubicCm(cubicMeter) {
-  let cubicMeterCubicCmElement = document.getElementById("cubic-centimeter");
+  const cubicMeterCubicCmElement = document.getElementById("cubic-centimeter");
   let cubicMeterCubicCm = cubicMeter * 1000000;
   cubicMeterCubicCm = Number(cubicMeterCubicCm.toFixed(2));
   cubicMeterCubicCmElement.value = cubicMeterCubicCm;
@@ -28,7 +28,7 @@ function convertCubicMeterToCubicCm(cubicMeter) {
 
 // Convert Cubic Meter to Milliliter
 function convertCubicMeterToMilliliter(cubicMeter) {
-  let cubicMeterMilliliterElement = document.getElementById("milliliter");
+  const cubicMeterMilliliterElement = document.getElementById("milliliter");
   let cubicMeterMilliliter = cubicMeter * 1000000;
   cubicMeterMilliliter = Number(cubicMeterMilliliter.toFixed(2));
   cubicMeterMilliliterElement.value = cubicMeterMilliliter;
@@ -48,7 +48,7 @@ literElement.addEventListener('input', (event) => {
 
 // Convert from Liter to Cubic Meter
 function convertLiterToCubicMeter(liter) {
-  let literCubicMeterElement = document.getElementById("cubic-meter");
+  const literCubicMeterElement = document.getElementById("cubic-meter");
   let literCubicMeter = liter / 1000;
   literCubicMeter = Number(literCubicMeter.toFixed(10));
   literCubicMeterElement.value = literCubicMeter;
@@ -56,7 +56,7 @@ function convertLiterToCubicMeter(liter) {
 
 // Convert Liter to Cubic Centimeter
 function convertLiterToCubicCm(liter) {
-  let literCubicCmElement = document.getElementById("cubic-centimeter");
+  const literCubicCmElement = document.getElementById("cubic-centimeter");
   let literCubicCm = liter * 1000;
   literCubicCm = Number(literCubicCm.toFixed(2));
   literCubicCmElement.value = literCubicCm;
@@ -64,7 +64,7 @@ function convertLiterToCubicCm(liter) {
 
 // Convert Liter to Milliliter
 function convertLiterToMilliliter(liter) {
-  let literMilliliterElement = document.getElementById("milliliter");
+  const literMilliliterElement = document.getElementById("milliliter");
   let literMilliliter = liter * 1000;
   literMilliliter = Number(literMilliliter.toFixed(2));
   literMilliliterElement.value = literMilliliter;
@@ -84,7 +84,7 @@ cubicCmElement.addEventListener('input', (event) => {
 
 // Convert from Cubic Centimeter to Cubic Meter
 function convertCubicCmToCubicMeter(cubicCm) {
-  let cubicCmCubicMeterElement = document.getElementById("cubic-meter");
+  const cubicCmCubicMeterElement = document.getElementById("cubic-meter");
   let cubicCmCubicMeter = cubicCm / 1000000;
   cubicCmCubicMeter = Number(cubicCmCubicMeter.toFixed(10));
   cubicCmCubicMeterElement.value = cubicCmCubicMeter;
@@ -92,7 +92,7 @@ function convertCubicCmToCubicMeter(cubicCm) {
 
 // Convert Cubic Centimeter to Liter
 function convertCubicCmToLiter(cubicCm) {
-  let cubicCmLiterElement = document.getElementById("liter");
+  const cubicCmLiterElement = document.getElementById("liter");
   let cubicCmLiter = cubicCm / 1000;
   cubicCmLiter = Number(cubicCmLiter.toFixed(10));
   cubicCmLiterElement.value = cubicCmLiter;
@@ -100,7 +100,7 @@ function convertCubicCmToLiter(cubicCm) {
 
 // Convert Cubic Centimeter to Milliliter
 function convertCubicCmToMilliliter(cubicCm) {
-  let cubicCmMilliliterElement = document.getElementById("milliliter");
+  const cubicCmMilliliterElement = document.getElementById("milliliter");
   let cubicCmMilliliter = cubicCm * 1;
   cubicCmMilliliter = Number(cubicCmMilliliter.toFixed(10));
   cubicCmMilliliterElement.value = cubicCmMilliliter;
@@ -120,7 +120,7 @@ milliliterElement.addEventListener('input', (event) => {
 
 // Convert from Milliliter to Cubic Meter
 function convertMilliliterToCubicMeter(milliliter) {
-  let milliliterCubicMeterElement = document.getElementById("cubic-meter");
+  const milliliterCubicMeterElement = document.getElementById("cubic-meter");
   let milliliterCubicMeter = milliliter / 1000000;
   milliliterCubicMeter = Number(milliliterCubicMeter.toFixed(10));
   milliliterCubicMeterElement.value = milliliterCubicMeter;
@@ -128,7 +128,7 @@ function convertMilliliterToCubicMeter(milliliter) {
 
 // Convert Milliliter to Liter
 function convertMilliliterToLiter(milliliter) {
-  let milliliterLiterElement = document.getElementById("liter");
+  const milliliterLiterElement = document.getElementById("liter");
   let milliliterLiter = milliliter / 1000;
   milliliterLiter = Number(milliliterLiter.toFixed(10));
   milliliterLiterElement.value = milliliterLiter;
@@ -136,7 +136,7 @@ function convertMilliliterToLiter(milliliter) {
 
 // Convert Milliliter to Cubic Centimeter
 function convertMilliliterToCubicCm(milliliter) {
-  let milliliterCubicCmElement = document.getElementById("cubic-centimeter");
+  const milliliterCubicCmElement = document.getElementById("cubic-centimeter");
   let milliliterCubicCm = milliliter * 1;
   milliliterCubicCm = Number(milliliterCubicCm.toFixed(10));
   milliliterCubicCmElement.value = milliliterCubicCm;

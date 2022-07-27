@@ -14,7 +14,7 @@ kilogramElement.addEventListener('input', (event) => {
 
 // Convert Kilogram to Gram
 function convertKilogramToGram(kilogram) {
-  let kilogramGramElement = document.getElementById("gram");
+  const kilogramGramElement = document.getElementById("gram");
   let kilogramGram = kilogram * 1000;
   kilogramGram = Number(kilogramGram.toFixed(2));
   kilogramGramElement.value = kilogramGram;
@@ -22,7 +22,7 @@ function convertKilogramToGram(kilogram) {
 
 // Convert Kilogram to Milligram
 function convertKilogramToMilligram(kilogram) {
-  let kilogramMilligramElement = document.getElementById("milligram");
+  const kilogramMilligramElement = document.getElementById("milligram");
   let kilogramMilligram = kilogram * 1000000;
   kilogramMilligram = Number(kilogramMilligram.toFixed(2));
   kilogramMilligramElement.value = kilogramMilligram;
@@ -30,7 +30,7 @@ function convertKilogramToMilligram(kilogram) {
 
 // Convert Kilogram to Pound
 function convertKilogramToPound(kilogram) {
-  let kilogramPoundElement = document.getElementById("pound");
+  const kilogramPoundElement = document.getElementById("pound");
   let kilogramPound = kilogram * 2.20462262185;
   kilogramPound = Number(kilogramPound.toFixed(7));
   kilogramPoundElement.value = kilogramPound;
@@ -38,7 +38,7 @@ function convertKilogramToPound(kilogram) {
 
 // Convert Kilogram to Ounce
 function convertKilogramToOunce(kilogram) {
-  let kilogramOunceElement = document.getElementById("ounce");
+  const kilogramOunceElement = document.getElementById("ounce");
   let kilogramOunce = kilogram * 35.274;
   kilogramOunce = Number(kilogramOunce.toFixed(5));
   kilogramOunceElement.value = kilogramOunce;
@@ -46,7 +46,7 @@ function convertKilogramToOunce(kilogram) {
 
 // Convert Kilogram to Stone
 function convertKilogramToStone(kilogram) {
-  let kilogramStoneElement = document.getElementById("stone");
+  const kilogramStoneElement = document.getElementById("stone");
   let kilogramStone = kilogram / 6.35029318;
   kilogramStone = Number(kilogramStone.toFixed(7));
   kilogramStoneElement.value = kilogramStone;
