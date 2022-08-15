@@ -52,3 +52,56 @@ function convertKilogramToStone(kilogram) {
   kilogramStoneElement.value = kilogramStone;
 }
 
+// ========== CONVERSIONS FROM GRAM TO OTHER UNITS ========== //
+
+// Trigger the convert from Gram functions upon data input
+const gramElement = document.getElementById("gram");
+gramElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let gram = target.value;
+  convertGramToKilogram(gram);
+  convertGramToMilligram(gram);
+  convertGramToPound(gram);
+  convertGramToOunce(gram);
+  convertGramToStone(gram);
+});
+
+// Convert Gram to Kilogram
+function convertGramToKilogram(gram) {
+  const gramKilogramElement = document.getElementById("kilogram");
+  let gramKilogram = gram / 1000;
+  gramKilogram = Number(gramKilogram.toFixed(6));
+  gramKilogramElement.value = gramKilogram;
+}
+
+// Convert Gram to Milligram
+function convertGramToMilligram(gram) {
+  const gramMilligramElement = document.getElementById("milligram");
+  let gramMilligram = gram * 1000;
+  gramMilligram = Number(gramMilligram.toFixed(6));
+  gramMilligramElement.value = gramMilligram;
+}
+
+// Convert Gram to Pound
+function convertGramToPound(gram) {
+  const gramPoundElement = document.getElementById("pound");
+  let gramPound = gram / 453.592;
+  gramPound = Number(gramPound.toFixed(6));
+  gramPoundElement.value = gramPound;
+}
+
+// Convert Gram to Ounce
+function convertGramToOunce(gram) {
+  const gramOunceElement = document.getElementById("ounce");
+  let gramOunce = gram / 28.34952;
+  gramOunce = Number(gramOunce.toFixed(6));
+  gramOunceElement.value = gramOunce;
+}
+
+// Convert Gram to Stone
+function convertGramToStone(gram) {
+  const gramStoneElement = document.getElementById("stone");
+  let gramStone = gram * 0.000157473;
+  gramStone = Number(gramStone.toFixed(6));
+  gramStoneElement.value = gramStone;
+}
