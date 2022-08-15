@@ -105,3 +105,57 @@ function convertGramToStone(gram) {
   gramStone = Number(gramStone.toFixed(6));
   gramStoneElement.value = gramStone;
 }
+
+// ========== CONVERSIONS FROM MILLIGRAM TO OTHER UNITS ========== //
+
+// Trigger the convert from Milligram functions upon data input
+const milligramElement = document.getElementById("milligram");
+milligramElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let milligram = target.value;
+  convertMilligramToKilogram(milligram);
+  convertMilligramToGram(milligram);
+  convertMilligramToPound(milligram);
+  convertMilligramToOunce(milligram);
+  convertMilligramToStone(milligram);
+});
+
+// Convert Milligram to Kilogram
+function convertMilligramToKilogram(milligram) {
+  const milligramKilogramElement = document.getElementById("kilogram");
+  let milligramKilogram = milligram / 1000000;
+  milligramKilogram = Number(milligramKilogram.toFixed(6));
+  milligramKilogramElement.value = milligramKilogram;
+}
+
+// Convert Milligram to Gram
+function convertMilligramToGram(milligram) {
+  const milligramGramElement = document.getElementById("gram");
+  let milligramGram = milligram / 1000;
+  milligramGram = Number(milligramGram.toFixed(6));
+  milligramGramElement.value = milligramGram;
+}
+
+// Convert Milligram to Pound
+function convertMilligramToPound(milligram) {
+  const milligramPoundElement = document.getElementById("pound");
+  let milligramPound = milligram / 453592.37;
+  milligramPound = Number(milligramPound.toFixed(6));
+  milligramPoundElement.value = milligramPound;
+}
+
+// Convert Milligram to Ounce
+function convertMilligramToOunce(milligram) {
+  const milligramOunceElement = document.getElementById("ounce");
+  let milligramOunce = milligram / 28350;
+  milligramOunce = Number(milligramOunce.toFixed(6));
+  milligramOunceElement.value = milligramOunce;
+}
+
+// Convert Milligram to Stone
+function convertMilligramToStone(milligram) {
+  const milligramStoneElement = document.getElementById("stone");
+  let milligramStone = milligram / 6350293.18;
+  milligramStone = Number(milligramStone.toFixed(6));
+  milligramStoneElement.value = milligramStone;
+}
