@@ -267,3 +267,57 @@ function convertOunceToStone(ounce) {
   ounceStone = Number(ounceStone.toFixed(6));
   ounceStoneElement.value = ounceStone;
 }
+
+// ========== CONVERSIONS FROM STONE TO OTHER UNITS ========== //
+
+// Trigger the convert from Stone functions upon data input
+const stoneElement = document.getElementById("stone");
+stoneElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let stone = target.value;
+  convertStoneToKilogram(stone);
+  convertStoneToGram(stone);
+  convertStoneToMilligram(stone);
+  convertStoneToPound(stone);
+  convertStoneToOunce(stone);
+});
+
+// Convert Stone to Kilogram
+function convertStoneToKilogram(stone) {
+  const stoneKilogramElement = document.getElementById("kilogram");
+  let stoneKilogram = stone * 6.350293;
+  stoneKilogram = Number(stoneKilogram.toFixed(6));
+  stoneKilogramElement.value = stoneKilogram;
+}
+
+// Convert Stone to Gram
+function convertStoneToGram(stone) {
+  const stoneGramElement = document.getElementById("gram");
+  let stoneGram = stone * 6350.293;
+  stoneGram = Number(stoneGram.toFixed(6));
+  stoneGramElement.value = stoneGram;
+}
+
+// Convert Stone to Milligram
+function convertStoneToMilligram(stone) {
+  const stoneMilligramElement = document.getElementById("milligram");
+  let stoneMilligram = stone * 6350293;
+  stoneMilligram = Number(stoneMilligram.toFixed(6));
+  stoneMilligramElement.value = stoneMilligram;
+}
+
+// Convert Stone to Pound
+function convertStoneToPound(stone) {
+  const stonePoundElement = document.getElementById("pound");
+  let stonePound = stone * 14;
+  stonePound = Number(stonePound.toFixed(6));
+  stonePoundElement.value = stonePound;
+}
+
+// Convert Stone to Ounce
+function convertStoneToOunce(stone) {
+  const stoneOunceElement = document.getElementById("ounce");
+  let stoneOunce = stone * 224;
+  stoneOunce = Number(stoneOunce.toFixed(6));
+  stoneOunceElement.value = stoneOunce;
+}
