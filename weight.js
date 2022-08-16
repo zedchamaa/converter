@@ -159,3 +159,57 @@ function convertMilligramToStone(milligram) {
   milligramStone = Number(milligramStone.toFixed(6));
   milligramStoneElement.value = milligramStone;
 }
+
+// ========== CONVERSIONS FROM POUND TO OTHER UNITS ========== //
+
+// Trigger the convert from Pound functions upon data input
+const poundElement = document.getElementById("pound");
+poundElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let pound = target.value;
+  convertPoundToKilogram(pound);
+  convertPoundToGram(pound);
+  convertPoundToMilligram(pound);
+  convertPoundToOunce(pound);
+  convertPoundToStone(pound);
+});
+
+// Convert Pound to Kilogram
+function convertPoundToKilogram(pound) {
+  const poundKilogramElement = document.getElementById("kilogram");
+  let poundKilogram = pound / 2.205;
+  poundKilogram = Number(poundKilogram.toFixed(6));
+  poundKilogramElement.value = poundKilogram;
+}
+
+// Convert Pound to Gram
+function convertPoundToGram(pound) {
+  const poundGramElement = document.getElementById("gram");
+  let poundGram = pound * 453.59237;
+  poundGram = Number(poundGram.toFixed(6));
+  poundGramElement.value = poundGram;
+}
+
+// Convert Pound to Milligram
+function convertPoundToMilligram(pound) {
+  const poundMilligramElement = document.getElementById("milligram");
+  let poundMilligram = pound * 453592.37;
+  poundMilligram = Number(poundMilligram.toFixed(6));
+  poundMilligramElement.value = poundMilligram;
+}
+
+// Convert Pound to Ounce
+function convertPoundToOunce(pound) {
+  const poundOunceElement = document.getElementById("ounce");
+  let poundOunce = pound * 16;
+  poundOunce = Number(poundOunce.toFixed(6));
+  poundOunceElement.value = poundOunce;
+}
+
+// Convert Pound to Stone
+function convertPoundToStone(pound) {
+  const poundStoneElement = document.getElementById("stone");
+  let poundStone = pound / 14;
+  poundStone = Number(poundStone.toFixed(6));
+  poundStoneElement.value = poundStone;
+}
