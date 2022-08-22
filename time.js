@@ -213,3 +213,57 @@ function convertSecondToYear(second) {
   secondYear = Number(secondYear.toFixed(8));
   secondYearElement.value = secondYear;
 }
+
+// ========== CONVERSIONS FROM WEEK TO OTHER UNITS ========== //
+
+// Trigger the convert from Week functions upon data input
+const weekElement = document.getElementById("week");
+weekElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let week = target.value;
+  convertWeekToDay(week);
+  convertWeekToHour(week);
+  convertWeekToMinute(week);
+  convertWeekToSecond(week);
+  convertWeekToYear(week);
+});
+
+// Convert Week to Day
+function convertWeekToDay(week) {
+  const weekDayElement = document.getElementById("day");
+  let weekDay = week * 7;
+  weekDay = Number(weekDay.toFixed(2));
+  weekDayElement.value = weekDay;
+}
+
+// Convert Week to Hour
+function convertWeekToHour(week) {
+  const weekHourElement = document.getElementById("hour");
+  let weekHour = week * 168;
+  weekHour = Number(weekHour.toFixed(2));
+  weekHourElement.value = weekHour;
+}
+
+// Convert Week to Minute
+function convertWeekToMinute(week) {
+  const weekMinuteElement = document.getElementById("minute");
+  let weekMinute = week * 10080;
+  weekMinute = Number(weekMinute.toFixed(7));
+  weekMinuteElement.value = weekMinute;
+}
+
+// Convert Week to Second
+function convertWeekToSecond(week) {
+  const weekSecondElement = document.getElementById("second");
+  let weekSecond = week * 604800;
+  weekSecond = Number(weekSecond.toFixed(7));
+  weekSecondElement.value = weekSecond;
+}
+
+// Convert Week to Year
+function convertWeekToYear(week) {
+  const weekYearElement = document.getElementById("year");
+  let weekYear = week / 52.143;
+  weekYear = Number(weekYear.toFixed(7));
+  weekYearElement.value = weekYear;
+}
