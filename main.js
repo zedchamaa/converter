@@ -36,7 +36,7 @@ class MyNav extends HTMLElement {
                     <li><a href="index.html">Temperature</a></li>
                     <li><a href="volume.html">Volume</a></li>
                     <li><a href="weight.html">Weight</a></li>
-                    <li><a href="#">Time</a></li>
+                    <li><a href="time.html">Time</a></li>
                 </ul>
             </nav>
         `
