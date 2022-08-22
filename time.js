@@ -105,3 +105,57 @@ function convertHourToYear(hour) {
   hourYear = Number(hourYear.toFixed(7));
   hourYearElement.value = hourYear;
 }
+
+// ========== CONVERSIONS FROM MINUTE TO OTHER UNITS ========== //
+
+// Trigger the convert from Minute functions upon data input
+const minuteElement = document.getElementById("minute");
+minuteElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let minute = target.value;
+  convertMinuteToDay(minute);
+  convertMinuteToHour(minute);
+  convertMinuteToSecond(minute);
+  convertMinuteToWeek(minute);
+  convertMinuteToYear(minute);
+});
+
+// Convert Minute to Day
+function convertMinuteToDay(minute) {
+  const minuteDayElement = document.getElementById("day");
+  let minuteDay = minute / 1440;
+  minuteDay = Number(minuteDay.toFixed(7));
+  minuteDayElement.value = minuteDay;
+}
+
+// Convert Minute to Hour
+function convertMinuteToHour(minute) {
+  const minuteHourElement = document.getElementById("hour");
+  let minuteHour = minute / 60;
+  minuteHour = Number(minuteHour.toFixed(7));
+  minuteHourElement.value = minuteHour;
+}
+
+// Convert Minute to Second
+function convertMinuteToSecond(minute) {
+  const minuteSecondElement = document.getElementById("second");
+  let minuteSecond = minute * 60;
+  minuteSecond = Number(minuteSecond.toFixed(2));
+  minuteSecondElement.value = minuteSecond;
+}
+
+// Convert Minute to Week
+function convertMinuteToWeek(minute) {
+  const minuteWeekElement = document.getElementById("week");
+  let minuteWeek = minute / 10080;
+  minuteWeek = Number(minuteWeek.toFixed(7));
+  minuteWeekElement.value = minuteWeek;
+}
+
+// Convert Minute to Year
+function convertMinuteToYear(minute) {
+  const minuteYearElement = document.getElementById("year");
+  let minuteYear = minute / 525600;
+  minuteYear = Number(minuteYear.toFixed(7));
+  minuteYearElement.value = minuteYear;
+}
