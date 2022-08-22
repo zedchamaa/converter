@@ -159,3 +159,57 @@ function convertMinuteToYear(minute) {
   minuteYear = Number(minuteYear.toFixed(7));
   minuteYearElement.value = minuteYear;
 }
+
+// ========== CONVERSIONS FROM SECOND TO OTHER UNITS ========== //
+
+// Trigger the convert from Second functions upon data input
+const secondElement = document.getElementById("second");
+secondElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let second = target.value;
+  convertSecondToDay(second);
+  convertSecondToHour(second);
+  convertSecondToMinute(second);
+  convertSecondToWeek(second);
+  convertSecondToYear(second);
+});
+
+// Convert Second to Day
+function convertSecondToDay(second) {
+  const secondDayElement = document.getElementById("day");
+  let secondDay = second / 86400;
+  secondDay = Number(secondDay.toFixed(7));
+  secondDayElement.value = secondDay;
+}
+
+// Convert Second to Hour
+function convertSecondToHour(second) {
+  const secondHourElement = document.getElementById("hour");
+  let secondHour = second / 3600;
+  secondHour = Number(secondHour.toFixed(7));
+  secondHourElement.value = secondHour;
+}
+
+// Convert Second to Minute
+function convertSecondToMinute(second) {
+  const secondMinuteElement = document.getElementById("minute");
+  let secondMinute = second / 60;
+  secondMinute = Number(secondMinute.toFixed(5));
+  secondMinuteElement.value = secondMinute;
+}
+
+// Convert Second to Week
+function convertSecondToWeek(second) {
+  const secondWeekElement = document.getElementById("week");
+  let secondWeek = second / 604800;
+  secondWeek = Number(secondWeek.toFixed(7));
+  secondWeekElement.value = secondWeek;
+}
+
+// Convert Second to Year
+function convertSecondToYear(second) {
+  const secondYearElement = document.getElementById("year");
+  let secondYear = second * 0.00000003171;
+  secondYear = Number(secondYear.toFixed(8));
+  secondYearElement.value = secondYear;
+}
