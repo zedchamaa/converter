@@ -40,29 +40,29 @@ async function getLatestRates() {
   // Convert from USD to other currencies
   function convertFrom(usd) {
     // Convert USD to EUR
-    convertCurrency(usd, "eur", usdEUR);
+    convertUSD(usd, "eur", usdEUR);
     // Convert USD to JPY
-    convertCurrency(usd, "jpy", usdJPY);
+    convertUSD(usd, "jpy", usdJPY);
     // Convert USD to GBP
-    convertCurrency(usd, "gbp", usdGBP);
+    convertUSD(usd, "gbp", usdGBP);
     // Convert USD to AUD
-    convertCurrency(usd, "aud", usdAUD);
+    convertUSD(usd, "aud", usdAUD);
     // Convert USD to CAD
-    convertCurrency(usd, "cad", usdCAD);
+    convertUSD(usd, "cad", usdCAD);
     // Convert USD to CHF
-    convertCurrency(usd, "chf", usdCHF);
+    convertUSD(usd, "chf", usdCHF);
     // Convert USD to CNY
-    convertCurrency(usd, "cny", usdCNY);
+    convertUSD(usd, "cny", usdCNY);
     // Convert USD to SEK
-    convertCurrency(usd, "sek", usdSEK);
+    convertUSD(usd, "sek", usdSEK);
     // Convert USD to NZD
-    convertCurrency(usd, "nzd", usdNZD);
+    convertUSD(usd, "nzd", usdNZD);
   }
   
   convertFrom(usd);
 
-  // Convert from one currency to another
-  function convertCurrency(originCurrency, targetCurrency, exchangeRate) {
+  // Convert from USD to other currencies
+  function convertUSD(originCurrency, targetCurrency, exchangeRate) {
     let conversion = originCurrency * exchangeRate;
     conversion = Number(conversion.toFixed(2));
     const element = document.getElementById(targetCurrency);
@@ -70,6 +70,49 @@ async function getLatestRates() {
   }
 
   });
+
+  // ========== CONVERSIONS FROM EUR TO OTHER UNITS ========== //
+
+  // Trigger the convert from EUR functions upon data input
+  const eurElement = document.getElementById("eur");
+  eurElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let eur = target.value;
+
+  // Convert from EUR to other currencies
+  function convertFrom(eur) {
+    // Convert EUR to USD
+    convertEUR(eur, "usd", usdEUR);
+    // Convert EUR to JPY
+    convertEUR(eur, "jpy", usdJPY);
+    // Convert EUR to GBP
+    convertEUR(eur, "gbp", usdGBP);
+    // Convert EUR to AUD
+    convertEUR(eur, "aud", usdAUD);
+    // Convert EUR to CAD
+    convertEUR(eur, "cad", usdCAD);
+    // Convert EUR to CHF
+    convertEUR(eur, "chf", usdCHF);
+    // Convert EUR to CNY
+    convertEUR(eur, "cny", usdCNY);
+    // Convert EUR to SEK
+    convertEUR(eur, "sek", usdSEK);
+    // Convert EUR to NZD
+    convertEUR(eur, "nzd", usdNZD);
+  }
+  
+  convertFrom(eur);
+
+  // Convert from EUR to other currencies
+  function convertEUR(originCurrency, targetCurrency, exchangeRate) {
+    let conversion = exchangeRate / originCurrency;
+    conversion = Number(conversion.toFixed(2));
+    const element = document.getElementById(targetCurrency);
+    element.value = conversion;
+  }
+
+  });
+
 }
 
 window.onload = getLatestRates(); 
