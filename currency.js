@@ -20,3 +20,24 @@ function convertCurrency(originCurrency, targetCurrency) {
     element.value = conversion;
   }
 }
+
+// ========== CONVERSIONS FROM USD TO OTHER UNITS ========== //
+
+// Trigger the convert from USD functions upon data input
+const usdElement = document.getElementById("usd");
+usdElement.addEventListener('input', (event) => { 
+const { target } = event;
+let usd = target.value;
+
+// Convert from USD to other currencies
+convertCurrency('USD','GBP');
+convertCurrency('USD','EUR');
+convertCurrency('USD','JPY');
+convertCurrency('USD','AUD');
+convertCurrency('USD','CAD');
+convertCurrency('USD','CHF');
+convertCurrency('USD','CNY');
+convertCurrency('USD','SEK');
+convertCurrency('USD','NZD');
+
+});
