@@ -86,3 +86,24 @@ convertCurrency(amount,'JPY','CNY');
 convertCurrency(amount,'JPY','SEK');
 convertCurrency(amount,'JPY','NZD');
 });
+
+// ========== CONVERSIONS FROM GBP TO OTHER CURRENCIES ========== //
+
+// Trigger the convert from GBP functions upon data input
+const gbpElement = document.getElementById("gbp");
+gbpElement.addEventListener('input', (event) => { 
+const { target } = event;
+let amount = target.value;
+amount = Number(amount);
+
+// Convert from GBP to other currencies
+convertCurrency(amount,'GBP','USD');
+convertCurrency(amount,'GBP','EUR');
+convertCurrency(amount,'GBP','JPY');
+convertCurrency(amount,'GBP','AUD');
+convertCurrency(amount,'GBP','CAD');
+convertCurrency(amount,'GBP','CHF');
+convertCurrency(amount,'GBP','CNY');
+convertCurrency(amount,'GBP','SEK');
+convertCurrency(amount,'GBP','NZD');
+});
