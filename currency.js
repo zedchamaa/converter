@@ -16,7 +16,7 @@ function convertCurrency(amount, originCurrency, targetCurrency) {
 
     // calculate the total conversion value based on user input
     let totalConversion = amount * conversion;
-    totalConversion = Number(totalConversion.toFixed(2));
+    totalConversion = Number(totalConversion.toFixed(4));
 
     // update the target currency with the appropriate conversion value
     const element = document.getElementById(targetCurrency.toLowerCase());
@@ -64,4 +64,25 @@ convertCurrency(amount,'EUR','CHF');
 convertCurrency(amount,'EUR','CNY');
 convertCurrency(amount,'EUR','SEK');
 convertCurrency(amount,'EUR','NZD');
+});
+
+// ========== CONVERSIONS FROM JPY TO OTHER CURRENCIES ========== //
+
+// Trigger the convert from JPY functions upon data input
+const jpyElement = document.getElementById("jpy");
+jpyElement.addEventListener('input', (event) => { 
+const { target } = event;
+let amount = target.value;
+amount = Number(amount);
+
+// Convert from JPY to other currencies
+convertCurrency(amount,'JPY','USD');
+convertCurrency(amount,'JPY','EUR');
+convertCurrency(amount,'JPY','GBP');
+convertCurrency(amount,'JPY','AUD');
+convertCurrency(amount,'JPY','CAD');
+convertCurrency(amount,'JPY','CHF');
+convertCurrency(amount,'JPY','CNY');
+convertCurrency(amount,'JPY','SEK');
+convertCurrency(amount,'JPY','NZD');
 });
