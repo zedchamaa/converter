@@ -44,3 +44,24 @@ convertCurrency(amount,'USD','CNY');
 convertCurrency(amount,'USD','SEK');
 convertCurrency(amount,'USD','NZD');
 });
+
+// ========== CONVERSIONS FROM EUR TO OTHER CURRENCIES ========== //
+
+// Trigger the convert from EUR functions upon data input
+const eurElement = document.getElementById("eur");
+eurElement.addEventListener('input', (event) => { 
+const { target } = event;
+let amount = target.value;
+amount = Number(amount);
+
+// Convert from EUR to other currencies
+convertCurrency(amount,'EUR','USD');
+convertCurrency(amount,'EUR','JPY');
+convertCurrency(amount,'EUR','GBP');
+convertCurrency(amount,'EUR','AUD');
+convertCurrency(amount,'EUR','CAD');
+convertCurrency(amount,'EUR','CHF');
+convertCurrency(amount,'EUR','CNY');
+convertCurrency(amount,'EUR','SEK');
+convertCurrency(amount,'EUR','NZD');
+});
