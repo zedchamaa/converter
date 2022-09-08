@@ -149,3 +149,24 @@ convertCurrency(amount,'CHF','CNY');
 convertCurrency(amount,'CHF','SEK');
 convertCurrency(amount,'CHF','NZD');
 });
+
+// ========== CONVERSIONS FROM CNY TO OTHER CURRENCIES ========== //
+
+// Trigger the convert from CNY functions upon data input
+const cnyElement = document.getElementById("cny");
+cnyElement.addEventListener('input', (event) => { 
+const { target } = event;
+let amount = target.value;
+amount = Number(amount);
+
+// Convert from CNY to other currencies
+convertCurrency(amount,'CNY','USD');
+convertCurrency(amount,'CNY','EUR');
+convertCurrency(amount,'CNY','JPY');
+convertCurrency(amount,'CNY','GBP');
+convertCurrency(amount,'CNY','AUD');
+convertCurrency(amount,'CNY','CAD');
+convertCurrency(amount,'CNY','CHF');
+convertCurrency(amount,'CNY','SEK');
+convertCurrency(amount,'CNY','NZD');
+});
