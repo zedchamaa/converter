@@ -2,7 +2,7 @@
 
 // Trigger the convert from Kilogram functions upon data input
 const kilogramElement = document.getElementById("kilogram");
-usdElement.addEventListener('input', (event) => { 
+kilogramElement.addEventListener('input', (event) => { 
   const { target } = event;
   let kilogram = target.value;
   convertKilogramToGram(kilogram);
