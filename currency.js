@@ -107,3 +107,24 @@ convertCurrency(amount,'GBP','CNY');
 convertCurrency(amount,'GBP','SEK');
 convertCurrency(amount,'GBP','NZD');
 });
+
+// ========== CONVERSIONS FROM AUD TO OTHER CURRENCIES ========== //
+
+// Trigger the convert from AUD functions upon data input
+const audElement = document.getElementById("aud");
+audElement.addEventListener('input', (event) => { 
+const { target } = event;
+let amount = target.value;
+amount = Number(amount);
+
+// Convert from AUD to other currencies
+convertCurrency(amount,'AUD','USD');
+convertCurrency(amount,'AUD','EUR');
+convertCurrency(amount,'AUD','JPY');
+convertCurrency(amount,'AUD','GBP');
+convertCurrency(amount,'AUD','CAD');
+convertCurrency(amount,'AUD','CHF');
+convertCurrency(amount,'AUD','CNY');
+convertCurrency(amount,'AUD','SEK');
+convertCurrency(amount,'AUD','NZD');
+});
