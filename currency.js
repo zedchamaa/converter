@@ -191,3 +191,24 @@ convertCurrency(amount,'SEK','CHF');
 convertCurrency(amount,'SEK','CNY');
 convertCurrency(amount,'SEK','NZD');
 });
+
+// ========== CONVERSIONS FROM NZD TO OTHER CURRENCIES ========== //
+
+// Trigger the convert from NZD functions upon data input
+const nzdElement = document.getElementById("nzd");
+nzdElement.addEventListener('input', (event) => { 
+const { target } = event;
+let amount = target.value;
+amount = Number(amount);
+
+// Convert from NZD to other currencies
+convertCurrency(amount,'NZD','USD');
+convertCurrency(amount,'NZD','EUR');
+convertCurrency(amount,'NZD','JPY');
+convertCurrency(amount,'NZD','GBP');
+convertCurrency(amount,'NZD','AUD');
+convertCurrency(amount,'NZD','CAD');
+convertCurrency(amount,'NZD','CHF');
+convertCurrency(amount,'NZD','CNY');
+convertCurrency(amount,'NZD','SEK');
+});
