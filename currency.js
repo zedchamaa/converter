@@ -170,3 +170,24 @@ convertCurrency(amount,'CNY','CHF');
 convertCurrency(amount,'CNY','SEK');
 convertCurrency(amount,'CNY','NZD');
 });
+
+// ========== CONVERSIONS FROM SEK TO OTHER CURRENCIES ========== //
+
+// Trigger the convert from SEK functions upon data input
+const sekElement = document.getElementById("sek");
+sekElement.addEventListener('input', (event) => { 
+const { target } = event;
+let amount = target.value;
+amount = Number(amount);
+
+// Convert from SEK to other currencies
+convertCurrency(amount,'SEK','USD');
+convertCurrency(amount,'SEK','EUR');
+convertCurrency(amount,'SEK','JPY');
+convertCurrency(amount,'SEK','GBP');
+convertCurrency(amount,'SEK','AUD');
+convertCurrency(amount,'SEK','CAD');
+convertCurrency(amount,'SEK','CHF');
+convertCurrency(amount,'SEK','CNY');
+convertCurrency(amount,'SEK','NZD');
+});
