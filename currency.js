@@ -128,3 +128,24 @@ convertCurrency(amount,'AUD','CNY');
 convertCurrency(amount,'AUD','SEK');
 convertCurrency(amount,'AUD','NZD');
 });
+
+// ========== CONVERSIONS FROM CHF TO OTHER CURRENCIES ========== //
+
+// Trigger the convert from CHF functions upon data input
+const chfElement = document.getElementById("chf");
+chfElement.addEventListener('input', (event) => { 
+const { target } = event;
+let amount = target.value;
+amount = Number(amount);
+
+// Convert from CHF to other currencies
+convertCurrency(amount,'CHF','USD');
+convertCurrency(amount,'CHF','EUR');
+convertCurrency(amount,'CHF','JPY');
+convertCurrency(amount,'CHF','GBP');
+convertCurrency(amount,'CHF','AUD');
+convertCurrency(amount,'CHF','CAD');
+convertCurrency(amount,'CHF','CNY');
+convertCurrency(amount,'CHF','SEK');
+convertCurrency(amount,'CHF','NZD');
+});
