@@ -53,3 +53,31 @@ function convertFromHour(hour, targetUnit) {
   conversion = Number(conversion.toFixed(decimalPoint));
   element.value = conversion;
 }
+
+// ========== CONVERSIONS FROM MINUTE TO OTHER UNITS ========== //
+
+// Trigger the convert from Minute functions upon data input
+const minuteElement = document.getElementById("minute");
+minuteElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let minute = target.value;
+  convertFromMinute(minute, 'day');
+  convertFromMinute(minute, 'hour');
+  convertFromMinute(minute, 'second');
+  convertFromMinute(minute, 'week');
+  convertFromMinute(minute, 'year');
+});
+
+// Convert from Minute to other units
+function convertFromMinute(minute, targetUnit) {
+  const element = document.getElementById(targetUnit);
+  let conversion;
+  let decimalPoint;
+  if (targetUnit === 'day') conversion = minute / 1440, decimalPoint = 7;
+  if (targetUnit === 'hour') conversion = minute / 60, decimalPoint = 7;
+  if (targetUnit === 'second') conversion = minute * 60, decimalPoint = 2;
+  if (targetUnit === 'week') conversion = minute / 10080, decimalPoint = 7;
+  if (targetUnit === 'year') conversion = minute / 525600, decimalPoint = 7;
+  conversion = Number(conversion.toFixed(decimalPoint));
+  element.value = conversion;
+}
