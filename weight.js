@@ -33,15 +33,15 @@ const gramElement = document.getElementById("gram");
 gramElement.addEventListener('input', (event) => { 
   const { target } = event;
   let gram = target.value;
-  convertFromMilligram(gram, 'kilogram');
-  convertFromMilligram(gram, 'milligram');
-  convertFromMilligram(gram, 'pound');
-  convertFromMilligram(gram, 'ounce');
-  convertFromMilligram(gram, 'stone');
+  convertFromPound(gram, 'kilogram');
+  convertFromPound(gram, 'milligram');
+  convertFromPound(gram, 'pound');
+  convertFromPound(gram, 'ounce');
+  convertFromPound(gram, 'stone');
 });
 
 // Convert from Gram to other units
-function convertFromMilligram(gram, targetUnit) {
+function convertFromPound(gram, targetUnit) {
   const element = document.getElementById(targetUnit);
   let conversion;
   let decimalPoint;
@@ -61,15 +61,15 @@ const milligramElement = document.getElementById("milligram");
 milligramElement.addEventListener('input', (event) => { 
   const { target } = event;
   let milligram = target.value;
-  convertFromMilligram(milligram, 'kilogram');
-  convertFromMilligram(milligram, 'gram');
-  convertFromMilligram(milligram, 'pound');
-  convertFromMilligram(milligram, 'ounce');
-  convertFromMilligram(milligram, 'stone');
+  convertFromPound(milligram, 'kilogram');
+  convertFromPound(milligram, 'gram');
+  convertFromPound(milligram, 'pound');
+  convertFromPound(milligram, 'ounce');
+  convertFromPound(milligram, 'stone');
 });
 
 // Convert from Milligram to other units
-function convertFromMilligram(milligram, targetUnit) {
+function convertFromPound(milligram, targetUnit) {
   const element = document.getElementById(targetUnit);
   let conversion;
   let decimalPoint;
@@ -78,6 +78,34 @@ function convertFromMilligram(milligram, targetUnit) {
   if (targetUnit === 'pound') conversion = milligram / 453592.37, decimalPoint = 6;
   if (targetUnit === 'ounce') conversion = milligram / 28350, decimalPoint = 6;
   if (targetUnit === 'stone') conversion = milligram / 6350293.18, decimalPoint = 6;
+  conversion = Number(conversion.toFixed(decimalPoint));
+  element.value = conversion;
+}
+
+// ========== CONVERSIONS FROM POUND TO OTHER UNITS ========== //
+
+// Trigger the convert from Pound functions upon data input
+const poundElement = document.getElementById("pound");
+poundElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let pound = target.value;
+  convertFromPound(pound, 'kilogram');
+  convertFromPound(pound, 'gram');
+  convertFromPound(pound, 'milligram');
+  convertFromPound(pound, 'ounce');
+  convertFromPound(pound, 'stone');
+});
+
+// Convert from Pound to other units
+function convertFromPound(pound, targetUnit) {
+  const element = document.getElementById(targetUnit);
+  let conversion;
+  let decimalPoint;
+  if (targetUnit === 'kilogram') conversion = pound / 2.205, decimalPoint = 6;
+  if (targetUnit === 'gram') conversion = pound * 453.59237, decimalPoint = 6;
+  if (targetUnit === 'milligram') conversion = pound * 453592.37, decimalPoint = 6;
+  if (targetUnit === 'ounce') conversion = pound * 16, decimalPoint = 6;
+  if (targetUnit === 'stone') conversion = pound / 14, decimalPoint = 6;
   conversion = Number(conversion.toFixed(decimalPoint));
   element.value = conversion;
 }
