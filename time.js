@@ -25,3 +25,31 @@ function convertFromDay(day, targetUnit) {
   conversion = Number(conversion.toFixed(decimalPoint));
   element.value = conversion;
 }
+
+// ========== CONVERSIONS FROM HOUR TO OTHER UNITS ========== //
+
+// Trigger the convert from Hour functions upon data input
+const hourElement = document.getElementById("hour");
+hourElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let hour = target.value;
+  convertFromHour(hour, 'day');
+  convertFromHour(hour, 'minute');
+  convertFromHour(hour, 'second');
+  convertFromHour(hour, 'week');
+  convertFromHour(hour, 'year');
+});
+
+// Convert from Hour to other units
+function convertFromHour(hour, targetUnit) {
+  const element = document.getElementById(targetUnit);
+  let conversion;
+  let decimalPoint;
+  if (targetUnit === 'day') conversion = hour / 24, decimalPoint = 2;
+  if (targetUnit === 'minute') conversion = hour * 60, decimalPoint = 2;
+  if (targetUnit === 'second') conversion = hour * 3600, decimalPoint = 2;
+  if (targetUnit === 'week') conversion = hour / 168, decimalPoint = 7;
+  if (targetUnit === 'year') conversion = hour / 8760, decimalPoint = 7;
+  conversion = Number(conversion.toFixed(decimalPoint));
+  element.value = conversion;
+}
