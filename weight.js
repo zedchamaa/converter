@@ -33,15 +33,15 @@ const gramElement = document.getElementById("gram");
 gramElement.addEventListener('input', (event) => { 
   const { target } = event;
   let gram = target.value;
-  convertFromOunce(gram, 'kilogram');
-  convertFromOunce(gram, 'milligram');
-  convertFromOunce(gram, 'pound');
-  convertFromOunce(gram, 'ounce');
-  convertFromOunce(gram, 'stone');
+  convertFromStone(gram, 'kilogram');
+  convertFromStone(gram, 'milligram');
+  convertFromStone(gram, 'pound');
+  convertFromStone(gram, 'ounce');
+  convertFromStone(gram, 'stone');
 });
 
 // Convert from Gram to other units
-function convertFromOunce(gram, targetUnit) {
+function convertFromStone(gram, targetUnit) {
   const element = document.getElementById(targetUnit);
   let conversion;
   let decimalPoint;
@@ -61,15 +61,15 @@ const milligramElement = document.getElementById("milligram");
 milligramElement.addEventListener('input', (event) => { 
   const { target } = event;
   let milligram = target.value;
-  convertFromOunce(milligram, 'kilogram');
-  convertFromOunce(milligram, 'gram');
-  convertFromOunce(milligram, 'pound');
-  convertFromOunce(milligram, 'ounce');
-  convertFromOunce(milligram, 'stone');
+  convertFromStone(milligram, 'kilogram');
+  convertFromStone(milligram, 'gram');
+  convertFromStone(milligram, 'pound');
+  convertFromStone(milligram, 'ounce');
+  convertFromStone(milligram, 'stone');
 });
 
 // Convert from Milligram to other units
-function convertFromOunce(milligram, targetUnit) {
+function convertFromStone(milligram, targetUnit) {
   const element = document.getElementById(targetUnit);
   let conversion;
   let decimalPoint;
@@ -89,15 +89,15 @@ const poundElement = document.getElementById("pound");
 poundElement.addEventListener('input', (event) => { 
   const { target } = event;
   let pound = target.value;
-  convertFromOunce(pound, 'kilogram');
-  convertFromOunce(pound, 'gram');
-  convertFromOunce(pound, 'milligram');
-  convertFromOunce(pound, 'ounce');
-  convertFromOunce(pound, 'stone');
+  convertFromStone(pound, 'kilogram');
+  convertFromStone(pound, 'gram');
+  convertFromStone(pound, 'milligram');
+  convertFromStone(pound, 'ounce');
+  convertFromStone(pound, 'stone');
 });
 
 // Convert from Pound to other units
-function convertFromOunce(pound, targetUnit) {
+function convertFromStone(pound, targetUnit) {
   const element = document.getElementById(targetUnit);
   let conversion;
   let decimalPoint;
@@ -117,15 +117,15 @@ const ounceElement = document.getElementById("ounce");
 ounceElement.addEventListener('input', (event) => { 
   const { target } = event;
   let ounce = target.value;
-  convertFromOunce(ounce, 'kilogram');
-  convertFromOunce(ounce, 'gram');
-  convertFromOunce(ounce, 'milligram');
-  convertFromOunce(ounce, 'pound');
-  convertFromOunce(ounce, 'stone');
+  convertFromStone(ounce, 'kilogram');
+  convertFromStone(ounce, 'gram');
+  convertFromStone(ounce, 'milligram');
+  convertFromStone(ounce, 'pound');
+  convertFromStone(ounce, 'stone');
 });
 
 // Convert from Ounce to other units
-function convertFromOunce(ounce, targetUnit) {
+function convertFromStone(ounce, targetUnit) {
   const element = document.getElementById(targetUnit);
   let conversion;
   let decimalPoint;
@@ -134,6 +134,34 @@ function convertFromOunce(ounce, targetUnit) {
   if (targetUnit === 'milligram') conversion = ounce * 28349.52, decimalPoint = 6;
   if (targetUnit === 'pound') conversion = ounce / 16, decimalPoint = 6;
   if (targetUnit === 'stone') conversion = ounce / 224, decimalPoint = 6;
+  conversion = Number(conversion.toFixed(decimalPoint));
+  element.value = conversion;
+}
+
+// ========== CONVERSIONS FROM STONE TO OTHER UNITS ========== //
+
+// Trigger the convert from Stone functions upon data input
+const stoneElement = document.getElementById("stone");
+stoneElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let stone = target.value;
+  convertFromStone(stone, 'kilogram');
+  convertFromStone(stone, 'gram');
+  convertFromStone(stone, 'milligram');
+  convertFromStone(stone, 'pound');
+  convertFromStone(stone, 'ounce');
+});
+
+// Convert from Stone to other units
+function convertFromStone(stone, targetUnit) {
+  const element = document.getElementById(targetUnit);
+  let conversion;
+  let decimalPoint;
+  if (targetUnit === 'kilogram') conversion = stone * 6.350293, decimalPoint = 6;
+  if (targetUnit === 'gram') conversion = stone * 6350.293, decimalPoint = 6;
+  if (targetUnit === 'milligram') conversion = stone * 6350293, decimalPoint = 6;
+  if (targetUnit === 'pound') conversion = stone * 14, decimalPoint = 6;
+  if (targetUnit === 'ounce') conversion = stone * 224, decimalPoint = 6;
   conversion = Number(conversion.toFixed(decimalPoint));
   element.value = conversion;
 }
