@@ -33,15 +33,15 @@ const gramElement = document.getElementById("gram");
 gramElement.addEventListener('input', (event) => { 
   const { target } = event;
   let gram = target.value;
-  convertFromGram(gram, 'kilogram');
-  convertFromGram(gram, 'milligram');
-  convertFromGram(gram, 'pound');
-  convertFromGram(gram, 'ounce');
-  convertFromGram(gram, 'stone');
+  convertFromMilligram(gram, 'kilogram');
+  convertFromMilligram(gram, 'milligram');
+  convertFromMilligram(gram, 'pound');
+  convertFromMilligram(gram, 'ounce');
+  convertFromMilligram(gram, 'stone');
 });
 
 // Convert from Gram to other units
-function convertFromGram(gram, targetUnit) {
+function convertFromMilligram(gram, targetUnit) {
   const element = document.getElementById(targetUnit);
   let conversion;
   let decimalPoint;
@@ -50,6 +50,34 @@ function convertFromGram(gram, targetUnit) {
   if (targetUnit === 'pound') conversion = gram / 453.592, decimalPoint = 6;
   if (targetUnit === 'ounce') conversion = gram / 28.34952, decimalPoint = 6;
   if (targetUnit === 'stone') conversion = gram * 0.000157473, decimalPoint = 6;
+  conversion = Number(conversion.toFixed(decimalPoint));
+  element.value = conversion;
+}
+
+// ========== CONVERSIONS FROM MILLIGRAM TO OTHER UNITS ========== //
+
+// Trigger the convert from Milligram functions upon data input
+const milligramElement = document.getElementById("milligram");
+milligramElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let milligram = target.value;
+  convertFromMilligram(milligram, 'kilogram');
+  convertFromMilligram(milligram, 'gram');
+  convertFromMilligram(milligram, 'pound');
+  convertFromMilligram(milligram, 'ounce');
+  convertFromMilligram(milligram, 'stone');
+});
+
+// Convert from Milligram to other units
+function convertFromMilligram(milligram, targetUnit) {
+  const element = document.getElementById(targetUnit);
+  let conversion;
+  let decimalPoint;
+  if (targetUnit === 'kilogram') conversion = milligram / 1000000, decimalPoint = 6;
+  if (targetUnit === 'gram') conversion = milligram / 1000, decimalPoint = 6;
+  if (targetUnit === 'pound') conversion = milligram / 453592.37, decimalPoint = 6;
+  if (targetUnit === 'ounce') conversion = milligram / 28350, decimalPoint = 6;
+  if (targetUnit === 'stone') conversion = milligram / 6350293.18, decimalPoint = 6;
   conversion = Number(conversion.toFixed(decimalPoint));
   element.value = conversion;
 }
