@@ -25,3 +25,31 @@ function convertFromKilogram(kilogram, targetUnit) {
   conversion = Number(conversion.toFixed(decimalPoint));
   element.value = conversion;
 }
+
+// ========== CONVERSIONS FROM GRAM TO OTHER UNITS ========== //
+
+// Trigger the convert from Gram functions upon data input
+const gramElement = document.getElementById("gram");
+gramElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let gram = target.value;
+  convertFromGram(gram, 'kilogram');
+  convertFromGram(gram, 'milligram');
+  convertFromGram(gram, 'pound');
+  convertFromGram(gram, 'ounce');
+  convertFromGram(gram, 'stone');
+});
+
+// Convert from Gram to other units
+function convertFromGram(gram, targetUnit) {
+  const element = document.getElementById(targetUnit);
+  let conversion;
+  let decimalPoint;
+  if (targetUnit === 'kilogram') conversion = gram / 1000, decimalPoint = 6;
+  if (targetUnit === 'milligram') conversion = gram * 1000, decimalPoint = 6;
+  if (targetUnit === 'pound') conversion = gram / 453.592, decimalPoint = 6;
+  if (targetUnit === 'ounce') conversion = gram / 28.34952, decimalPoint = 6;
+  if (targetUnit === 'stone') conversion = gram * 0.000157473, decimalPoint = 6;
+  conversion = Number(conversion.toFixed(decimalPoint));
+  element.value = conversion;
+}
