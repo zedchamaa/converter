@@ -81,3 +81,31 @@ function convertFromMinute(minute, targetUnit) {
   conversion = Number(conversion.toFixed(decimalPoint));
   element.value = conversion;
 }
+
+// ========== CONVERSIONS FROM SECONDS TO OTHER UNITS ========== //
+
+// Trigger the convert from Second functions upon data input
+const secondElement = document.getElementById("second");
+secondElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let second = target.value;
+  convertFromSecond(second, 'day');
+  convertFromSecond(second, 'hour');
+  convertFromSecond(second, 'minute');
+  convertFromSecond(second, 'week');
+  convertFromSecond(second, 'year');
+});
+
+// Convert from Second to other units
+function convertFromSecond(second, targetUnit) {
+  const element = document.getElementById(targetUnit);
+  let conversion;
+  let decimalPoint;
+  if (targetUnit === 'day') conversion = second / 86400, decimalPoint = 7;
+  if (targetUnit === 'hour') conversion = second / 3600, decimalPoint = 7;
+  if (targetUnit === 'minute') conversion = second / 60, decimalPoint = 5;
+  if (targetUnit === 'week') conversion = second / 604800, decimalPoint = 7;
+  if (targetUnit === 'year') conversion = second * 0.00000003171, decimalPoint = 8;
+  conversion = Number(conversion.toFixed(decimalPoint));
+  element.value = conversion;
+}
