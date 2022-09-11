@@ -69,3 +69,27 @@ function convertFromCubicCm(cubicCm, targetUnit) {
   conversion = Number(conversion.toFixed(decimalPoint));
   element.value = conversion;
 }
+
+// ========== CONVERSIONS FROM MILLILITER TO OTHER UNITS ========== //
+
+// Trigger the convert from Milliliter functions upon data input
+const milliliterElement = document.getElementById("milliliter");
+milliliterElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let milliliter = target.value;
+  convertFromMilliliter(milliliter, 'cubic-meter');
+  convertFromMilliliter(milliliter, 'liter');
+  convertFromMilliliter(milliliter, 'cubic-centimeter');
+});
+
+// Convert from Milliliter to other units
+function convertFromMilliliter(milliliter, targetUnit) {
+  const element = document.getElementById(targetUnit);
+  let conversion;
+  let decimalPoint;
+  if (targetUnit === 'cubic-meter') conversion = milliliter / 1000000, decimalPoint = 10;
+  if (targetUnit === 'liter') conversion = milliliter / 1000, decimalPoint = 10;
+  if (targetUnit === 'cubic-centimeter') conversion = milliliter * 1, decimalPoint = 10;
+  conversion = Number(conversion.toFixed(decimalPoint));
+  element.value = conversion;
+}
