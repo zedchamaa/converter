@@ -22,7 +22,7 @@ function convertFromCubicMeter(cubicMeter, targetUnit) {
   element.value = conversion;
 }
 
-// ========== CONVERSIONS FROM LITER METER TO OTHER UNITS ========== //
+// ========== CONVERSIONS FROM LITER TO OTHER UNITS ========== //
 
 // Trigger the convert from Liter functions upon data input
 const literElement = document.getElementById("liter");
@@ -42,6 +42,30 @@ function convertFromLiter(liter, targetUnit) {
   if (targetUnit === 'cubic-meter') conversion = liter / 1000, decimalPoint = 10;
   if (targetUnit === 'cubic-centimeter') conversion = liter * 1000, decimalPoint = 2;
   if (targetUnit === 'milliliter') conversion = liter * 1000, decimalPoint = 2;
+  conversion = Number(conversion.toFixed(decimalPoint));
+  element.value = conversion;
+}
+
+// ========== CONVERSIONS FROM CUBIC CM TO OTHER UNITS ========== //
+
+// Trigger the convert from Cubic Centimeter functions upon data input
+const cubicCmElement = document.getElementById("cubic-centimeter");
+cubicCmElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let cubicCm = target.value;
+  convertFromCubicCm(cubicCm, 'cubic-meter');
+  convertFromCubicCm(cubicCm, 'liter');
+  convertFromCubicCm(cubicCm, 'milliliter');
+});
+
+// Convert from Cubic Centimeter to other units
+function convertFromCubicCm(cubicCm, targetUnit) {
+  const element = document.getElementById(targetUnit);
+  let conversion;
+  let decimalPoint;
+  if (targetUnit === 'cubic-meter') conversion = cubicCm / 1000000, decimalPoint = 10;
+  if (targetUnit === 'liter') conversion = cubicCm / 1000, decimalPoint = 10;
+  if (targetUnit === 'milliliter') conversion = cubicCm * 1, decimalPoint = 10;
   conversion = Number(conversion.toFixed(decimalPoint));
   element.value = conversion;
 }
