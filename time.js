@@ -125,7 +125,7 @@ weekElement.addEventListener('input', (event) => {
 });
 
 // Convert from Week to other units
-function convertFromWeek (week, targetUnit) {
+function convertFromWeek(week, targetUnit) {
   const element = document.getElementById(targetUnit);
   let conversion;
   let decimalPoint;
@@ -134,6 +134,34 @@ function convertFromWeek (week, targetUnit) {
   if (targetUnit === 'minute') conversion = week * 10080, decimalPoint = 7;
   if (targetUnit === 'second') conversion = week * 604800, decimalPoint = 7;
   if (targetUnit === 'year') conversion = week / 52.143, decimalPoint = 7;
+  conversion = Number(conversion.toFixed(decimalPoint));
+  element.value = conversion;
+}
+
+// ========== CONVERSIONS FROM YEAR TO OTHER UNITS ========== //
+
+// Trigger the convert from Year functions upon data input
+const yearElement = document.getElementById("year");
+yearElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let year = target.value;
+  convertFromYear(year, 'day');
+  convertFromYear(year, 'hour');
+  convertFromYear(year, 'minute');
+  convertFromYear(year, 'second');
+  convertFromYear(year, 'week');
+});
+
+// Convert from Year to other units
+function convertFromYear(year, targetUnit) {
+  const element = document.getElementById(targetUnit);
+  let conversion;
+  let decimalPoint;
+  if (targetUnit === 'day') conversion = year * 365, decimalPoint = 2;
+  if (targetUnit === 'hour') conversion = year * 8760, decimalPoint = 2;
+  if (targetUnit === 'minute') conversion = year * 525600, decimalPoint = 2;
+  if (targetUnit === 'second') conversion = year * 31540000, decimalPoint = 2;
+  if (targetUnit === 'week') conversion = year * 52.1429, decimalPoint = 4;
   conversion = Number(conversion.toFixed(decimalPoint));
   element.value = conversion;
 }
