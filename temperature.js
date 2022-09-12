@@ -41,3 +41,25 @@ function convertFromFahrenheit(fahrenheit, targetUnit) {
   conversion = Number(conversion.toFixed(decimalPoint));
   element.value = conversion;
 }
+
+// ========== CONVERSIONS FROM KELVIN TO OTHER UNITS ========== //
+
+// Trigger the convert from Kelvin functions upon data input
+const kelvinElement = document.getElementById("kelvin");
+kelvinElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let kelvin = target.value;
+  convertFromKelvin(kelvin, 'celsius');
+  convertFromKelvin(kelvin, 'fahrenheit');
+});
+
+// Convert from Kelvin to other units
+function convertFromKelvin(kelvin, targetUnit) {
+  const element = document.getElementById(targetUnit);
+  let conversion;
+  let decimalPoint;
+  if (targetUnit === 'celsius') conversion = kelvin - 273.15, decimalPoint = 2;
+  if (targetUnit === 'fahrenheit') conversion = (kelvin - 273.15) * 9/5 + 32, decimalPoint = 2;
+  conversion = Number(conversion.toFixed(decimalPoint));
+  element.value = conversion;
+}
