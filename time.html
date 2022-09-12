@@ -1,70 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <script src="main.js" defer></script>
-  <script src="time.js" defer></script>
-  <title>Unit Converter</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="main.js" defer></script>
+    <script src="time.js" defer></script>
+    <title>Unit Converter</title>
+  </head>
+  <body>
+    <my-header></my-header>
 
-<my-header></my-header>
+    <section class="title">
+      <div>Time</div>
+    </section>
 
-<section class="title">
-  <div>Time</div>
-</section>
+    <main class="main">
+      <section class="main-container">
+        <div class="left-container">
+          <my-nav></my-nav>
+        </div>
+        <div class="right-container">
+          <table>
+            <tr class="row">
+              <td></td>
+              <td><clear-all></clear-all></td>
+            </tr>
+            <tr class="row">
+              <td>
+                <div class="unit">day <span>day</span></div>
+              </td>
+              <td>
+                <div><input type="number" id="day" name="day" value="" /></div>
+              </td>
+            </tr>
+            <tr class="row">
+              <td>
+                <div class="unit">hour <span>hour</span></div>
+              </td>
+              <td>
+                <div>
+                  <input type="number" id="hour" name="hour" value="" />
+                </div>
+              </td>
+            </tr>
+            <tr class="row">
+              <td>
+                <div class="unit">min <span>minute</span></div>
+              </td>
+              <td>
+                <div>
+                  <input type="number" id="minute" name="minute" value="" />
+                </div>
+              </td>
+            </tr>
+            <tr class="row">
+              <td>
+                <div class="unit">sec <span>second</span></div>
+              </td>
+              <td>
+                <div>
+                  <input type="number" id="second" name="second" value="" />
+                </div>
+              </td>
+            </tr>
+            <tr class="row">
+              <td>
+                <div class="unit">week <span>week</span></div>
+              </td>
+              <td>
+                <div>
+                  <input type="number" id="week" name="week" value="" />
+                </div>
+              </td>
+            </tr>
+            <tr class="row">
+              <td>
+                <div class="unit">year <span>year</span></div>
+              </td>
+              <td>
+                <div>
+                  <input type="number" id="year" name="year" value="" />
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </main>
 
-<main class="main">
-
-  <section class="main-container">
-    <div class="left-container">
-      <my-nav></my-nav>
-    </div>
-    <div class="right-container">
-      <table>
-        <tr class="row">
-          <td></td>
-          <td><clear-all></clear-all></td>
-        </tr>
-        <tr class="row">
-          <td><div class="unit">day <span>day</span></div></td>
-          <td><div><input type="number" id="day" name="day" value=""></div></td>
-        </tr>
-        <tr class="row">
-          <td><div class="unit">hour <span>hour</span></div></td>
-          <td><div><input type="number" id="hour" name="hour" value=""></div></td>
-        </tr>
-        <tr class="row">
-          <td><div class="unit">min <span>minute</span></div></td>
-          <td><div><input type="number" id="minute" name="minute" value=""></div></td>
-        </tr>
-        <tr class="row">
-          <td><div class="unit">sec <span>second</span></div></td>
-          <td><div><input type="number" id="second" name="second" value=""></div></td>
-        </tr>
-        <tr class="row">
-          <td><div class="unit">week <span>week</span></div></td>
-          <td><div><input type="number" id="week" name="week" value=""></div></td>
-        </tr>
-        <tr class="row">
-          <td><div class="unit">year <span>year</span></div></td>
-          <td><div><input type="number" id="year" name="year" value=""></div></td>
-        </tr>
-
-      </table>
-    </div>
-  </section>
-</main>
-
-<my-footer></my-footer>
-
-
-  
-</body>
+    <my-footer></my-footer>
+  </body>
 </html>

@@ -1,69 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <script src="main.js" defer></script>
-  <script src="weight.js" defer></script>
-  <title>Unit Converter</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="main.js" defer></script>
+    <script src="weight.js" defer></script>
+    <title>Unit Converter</title>
+  </head>
+  <body>
+    <my-header></my-header>
 
-<my-header></my-header>
+    <section class="title">
+      <div>Weight</div>
+    </section>
 
-<section class="title">
-  <div>Weight</div>
-</section>
+    <main class="main">
+      <section class="main-container">
+        <div class="left-container">
+          <my-nav></my-nav>
+        </div>
+        <div class="right-container">
+          <table>
+            <tr class="row">
+              <td></td>
+              <td><clear-all></clear-all></td>
+            </tr>
+            <tr class="row">
+              <td>
+                <div class="unit">kg <span>Kilogram</span></div>
+              </td>
+              <td>
+                <div>
+                  <input type="number" id="kilogram" name="kilogram" value="" />
+                </div>
+              </td>
+            </tr>
+            <tr class="row">
+              <td>
+                <div class="unit">g <span>Gram</span></div>
+              </td>
+              <td>
+                <div>
+                  <input type="number" id="gram" name="gram" value="" />
+                </div>
+              </td>
+            </tr>
+            <tr class="row">
+              <td>
+                <div class="unit">mg <span>Milligram</span></div>
+              </td>
+              <td>
+                <div>
+                  <input
+                    type="number"
+                    id="milligram"
+                    name="milligram"
+                    value=""
+                  />
+                </div>
+              </td>
+            </tr>
+            <tr class="row">
+              <td>
+                <div class="unit">lb <span>Pound</span></div>
+              </td>
+              <td>
+                <div>
+                  <input type="number" id="pound" name="pound" value="" />
+                </div>
+              </td>
+            </tr>
+            <tr class="row">
+              <td>
+                <div class="unit">oz <span>Ounce</span></div>
+              </td>
+              <td>
+                <div>
+                  <input type="number" id="ounce" name="ounce" value="" />
+                </div>
+              </td>
+            </tr>
+            <tr class="row">
+              <td>
+                <div class="unit">st <span>Stone</span></div>
+              </td>
+              <td>
+                <div>
+                  <input type="number" id="stone" name="stone" value="" />
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </main>
 
-<main class="main">
-
-  <section class="main-container">
-    <div class="left-container">
-      <my-nav></my-nav>
-    </div>
-    <div class="right-container">
-      <table>
-        <tr class="row">
-          <td></td>
-          <td><clear-all></clear-all></td>
-        </tr>
-        <tr class="row">
-          <td><div class="unit">kg <span>Kilogram</span></div></td>
-          <td><div><input type="number" id="kilogram" name="kilogram" value=""></div></td>
-        </tr>
-        <tr class="row">
-          <td><div class="unit">g <span>Gram</span></div></td>
-          <td><div><input type="number" id="gram" name="gram" value=""></div></td>
-        </tr>
-        <tr class="row">
-          <td><div class="unit">mg <span>Milligram</span></div></td>
-          <td><div><input type="number" id="milligram" name="milligram" value=""></div></td>
-        </tr>
-        <tr class="row">
-          <td><div class="unit">lb <span>Pound</span></div></td>
-          <td><div><input type="number" id="pound" name="pound" value=""></div></td>
-        </tr>
-        <tr class="row">
-          <td><div class="unit">oz <span>Ounce</span></div></td>
-          <td><div><input type="number" id="ounce" name="ounce" value=""></div></td>
-        </tr>
-        <tr class="row">
-          <td><div class="unit">st <span>Stone</span></div></td>
-          <td><div><input type="number" id="stone" name="stone" value=""></div></td>
-        </tr>
-      </table>
-    </div>
-  </section>
-</main>
-
-<my-footer></my-footer>
-
-
-  
-</body>
+    <my-footer></my-footer>
+  </body>
 </html>
