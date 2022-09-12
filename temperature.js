@@ -19,3 +19,25 @@ function convertFromCelsius(celsius, targetUnit) {
   conversion = Number(conversion.toFixed(decimalPoint));
   element.value = conversion;
 }
+
+// ========== CONVERSIONS FROM FAHRENHEIT TO OTHER UNITS ========== //
+
+// Trigger the convert from Fahrenheit functions upon data input
+const fahrenheitElement = document.getElementById("fahrenheit");
+fahrenheitElement.addEventListener('input', (event) => { 
+  const { target } = event;
+  let fahrenheit = target.value;
+  convertFromFahrenheit(fahrenheit, 'celsius');
+  convertFromFahrenheit(fahrenheit, 'kelvin');
+});
+
+// Convert from Fahrenheit to other units
+function convertFromFahrenheit(fahrenheit, targetUnit) {
+  const element = document.getElementById(targetUnit);
+  let conversion;
+  let decimalPoint;
+  if (targetUnit === 'celsius') conversion = ((fahrenheit - 32) * 5) / 9, decimalPoint = 2;
+  if (targetUnit === 'kelvin') conversion = ((fahrenheit - 32) * 5/9) + 273.15, decimalPoint = 2;
+  conversion = Number(conversion.toFixed(decimalPoint));
+  element.value = conversion;
+}
