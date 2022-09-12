@@ -5,76 +5,17 @@ const celsiusElement = document.getElementById("celsius");
 celsiusElement.addEventListener('input', (event) => { 
   const { target } = event;
   let celsius = target.value;
-  convertCelsiusFahrenheit(celsius);
-  convertCelsiusKelvin(celsius);
+  convertFromCelsius(celsius, 'fahrenheit');
+  convertFromCelsius(celsius, 'kelvin');
 });
 
-// Convert Celsius to Fahrenheit
-function convertCelsiusFahrenheit(celsius) {
-  const celsiusFahrenheitElement = document.getElementById("fahrenheit");
-  let celsiusFahrenheit = celsius * 9/5 + 32;
-  celsiusFahrenheit = Number(celsiusFahrenheit.toFixed(2));
-  celsiusFahrenheitElement.value = celsiusFahrenheit;
-}
-
-// Convert Celsius to Kelvin
-function convertCelsiusKelvin(celsius) {
-  const celsiusKelvinElement = document.getElementById("kelvin");
-  let celsiusKelvin = (celsius - 0) + 273.15;
-  celsiusKelvin = Number(celsiusKelvin.toFixed(2));
-  celsiusKelvinElement.value = celsiusKelvin;
-}
-
-// ========== CONVERSIONS FROM FAHRENHEIT TO OTHER UNITS ========== //
-
-// Trigger the convert from Fahrenheit functions upon data input
-const fahrenheitElement = document.getElementById("fahrenheit");
-fahrenheitElement.addEventListener('input', (event) => { 
-  const { target } = event; 
-  let fahrenheit = target.value;
-  convertFahrenheitCelsius(fahrenheit);
-  convertFahrenheitKelvin(fahrenheit);
-});
-
-// Convert Fahrenheit to Celsius
-function convertFahrenheitCelsius(fahrenheit) {
-  const fahrenheitCelsiusElement = document.getElementById("celsius");
-  let fahrenheitCelsius = ((fahrenheit - 32) * 5) / 9;
-  fahrenheitCelsius = Number(fahrenheitCelsius.toFixed(2));
-  fahrenheitCelsiusElement.value = fahrenheitCelsius;
-}
-
-// Convert Fahrenheit to Kelvin
-function convertFahrenheitKelvin(fahrenheit) {
-  const fahrenheitKelvinElement = document.getElementById("kelvin");
-  let fahrenheitKelvin = ((fahrenheit - 32) * 5/9) + 273.15;
-  fahrenheitKelvin = Number(fahrenheitKelvin.toFixed(2));
-  fahrenheitKelvinElement.value = fahrenheitKelvin;
-}
-
-// ========== CONVERSIONS FROM KELVIN TO OTHER UNITS ========== //
-
-// Trigger the convert from Kelvin functions upon data input
-const kelvinElement = document.getElementById("kelvin");
-kelvinElement.addEventListener('input', (event) => { 
-  const { target } = event; 
-  let kelvin = target.value;
-  convertKelvinCelsius(kelvin);
-  convertKelvinFahrenheit(kelvin);
-});
-
-// Convert Kelvin to Celsius
-function convertKelvinCelsius(kelvin) {
-  const kelvinCelsiusElement = document.getElementById("celsius");
-  let kelvinCelsius = kelvin - 273.15;
-  kelvinCelsius = Number(kelvinCelsius.toFixed(2));
-  kelvinCelsiusElement.value = kelvinCelsius;
-}
-
-// Convert Kelvin to Fahrenheit
-function convertKelvinFahrenheit(kelvin) {
-  const kelvinFahrenheitElement = document.getElementById("fahrenheit");
-  let kelvinFahrenheit = (kelvin - 273.15) * 9/5 + 32;
-  kelvinFahrenheit = Number(kelvinFahrenheit.toFixed(2));
-  kelvinFahrenheitElement.value = kelvinFahrenheit;
+// Convert from Celsius to other units
+function convertFromCelsius(celsius, targetUnit) {
+  const element = document.getElementById(targetUnit);
+  let conversion;
+  let decimalPoint;
+  if (targetUnit === 'fahrenheit') conversion = celsius * 9/5 + 32, decimalPoint = 2;
+  if (targetUnit === 'kelvin') conversion = (celsius - 0) + 273.15, decimalPoint = 2;
+  conversion = Number(conversion.toFixed(decimalPoint));
+  element.value = conversion;
 }
