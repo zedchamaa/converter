@@ -18,3 +18,24 @@ document.querySelectorAll('.nav-link')
   // remove active class from nav menu
   navMenu.classList.remove('active');
 }))
+
+// Centrally control the clear all button for all pages
+
+class ClearAll extends HTMLElement {
+  connectedCallback() {
+      this.innerHTML = `
+          <button>Clear All</button>
+      `
+  }
+}
+
+customElements.define("clear-all", ClearAll);
+
+// Clear input fields when "Clear all" button is clicked
+
+let btnClear = document.querySelector("button");
+let inputs = document.querySelectorAll("input");
+
+btnClear.addEventListener("click", () => {
+  inputs.forEach(input => input.value = "");
+});
