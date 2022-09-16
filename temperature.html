@@ -22,89 +22,62 @@
     <title>Unit Converter - Temperature</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <a class="nav-branding" href="/index.html">Converter</a>
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="/index.html" class="nav-link">Currency</a>
-          </li>
-          <li class="nav-item">
-            <a href="/temperature.html" class="nav-link">Temperature</a>
-          </li>
-          <li class="nav-item">
-            <a href="/volume.html" class="nav-link">Volume</a>
-          </li>
-          <li class="nav-item">
-            <a href="/weight.html" class="nav-link">Weight</a>
-          </li>
-          <li class="nav-item">
-            <a href="/time.html" class="nav-link">Time</a>
-          </li>
-        </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+    <div class="container">
+      <header class="header">
+        <nav class="navbar">
+          <a class="nav-branding" href="/index.html">Converter</a>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="/index.html" class="nav-link">Currency</a>
+            </li>
+            <li class="nav-item">
+              <a href="/temperature.html" class="nav-link">Temperature</a>
+            </li>
+            <li class="nav-item">
+              <a href="/volume.html" class="nav-link">Volume</a>
+            </li>
+            <li class="nav-item">
+              <a href="/weight.html" class="nav-link">Weight</a>
+            </li>
+            <li class="nav-item">
+              <a href="/time.html" class="nav-link">Time</a>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </header>
+      <main class="main">
+        <div class="converter-container">
+          <div class="page-heading">
+            <h1>Temperature Conversion</h1>
+            <div class="clear-button">
+              <button class="clear-all">Clear all</button>
+            </div>
+          </div>
+          <div class="box">
+            <label for="celsius">degree celsius (°C)</label><br />
+            <input type="number" id="celsius" name="celsius" value="" />
+          </div>
+          <div class="box">
+            <label for="fahrenheit">degree fahrenheit (°F)</label><br />
+            <input type="number" id="fahrenheit" name="fahrenheit" value="" />
+          </div>
+          <div class="box">
+            <label for="kelvin">kelvin (K)</label><br />
+            <input type="number" id="kelvin" name="kelvin" value="" />
+          </div>
         </div>
-      </nav>
-    </header>
-
-    <section class="title">
-      <div>Temperature</div>
-    </section>
-
-    <main class="main">
-      <section class="main-container">
-        <div class="left-container">
-          <my-nav></my-nav>
+      </main>
+      <footer class="footer">
+        <div class="copyright">
+          Copyright &copy; 2022
+          <a target="_blank" href="https://zedchamaa.com/">zedchamaa.com</a>
         </div>
-        <div class="right-container">
-          <table>
-            <tr class="row">
-              <td></td>
-              <td><clear-all></clear-all></td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">°C <span>Degree Celsius</span></div>
-              </td>
-              <td>
-                <div>
-                  <input type="number" id="celsius" name="celsius" value="" />
-                </div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">°F <span>Degree Fahrenheit</span></div>
-              </td>
-              <td>
-                <div>
-                  <input
-                    type="number"
-                    id="fahrenheit"
-                    name="fahrenheit"
-                    value=""
-                  />
-                </div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">&nbsp;K <span>Kelvin</span></div>
-              </td>
-              <td>
-                <div>
-                  <input type="number" id="kelvin" name="kelvin" value="" />
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-      </section>
-    </main>
-
-    <my-footer></my-footer>
+      </footer>
+    </div>
   </body>
 </html>
