@@ -19,112 +19,74 @@
     <title>Unit Converter - Time</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <a class="nav-branding" href="/index.html">Converter</a>
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="/index.html" class="nav-link">Currency</a>
-          </li>
-          <li class="nav-item">
-            <a href="/temperature.html" class="nav-link">Temperature</a>
-          </li>
-          <li class="nav-item">
-            <a href="/volume.html" class="nav-link">Volume</a>
-          </li>
-          <li class="nav-item">
-            <a href="/weight.html" class="nav-link">Weight</a>
-          </li>
-          <li class="nav-item">
-            <a href="/time.html" class="nav-link">Time</a>
-          </li>
-        </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+    <div class="container">
+      <header class="header">
+        <nav class="navbar">
+          <a class="nav-branding" href="/index.html">Converter</a>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="/index.html" class="nav-link">Currency</a>
+            </li>
+            <li class="nav-item">
+              <a href="/temperature.html" class="nav-link">Temperature</a>
+            </li>
+            <li class="nav-item">
+              <a href="/volume.html" class="nav-link">Volume</a>
+            </li>
+            <li class="nav-item">
+              <a href="/weight.html" class="nav-link">Weight</a>
+            </li>
+            <li class="nav-item">
+              <a href="/time.html" class="nav-link">Time</a>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </header>
+      <main class="main">
+        <div class="converter-container">
+          <div class="page-heading">
+            <h1>Time Conversion</h1>
+            <div class="clear-button">
+              <button class="clear-all">Clear all</button>
+            </div>
+          </div>
+          <div class="box">
+            <label for="day">day</label><br />
+            <input type="number" id="day" name="day" value="" />
+          </div>
+          <div class="box">
+            <label for="hour">hour</label><br />
+            <input type="number" id="hour" name="hour" value="" />
+          </div>
+          <div class="box">
+            <label for="minute">minute</label><br />
+            <input type="number" id="minute" name="minute" value="" />
+          </div>
+          <div class="box">
+            <label for="second">second</label><br />
+            <input type="number" id="second" name="second" value="" />
+          </div>
+          <div class="box">
+            <label for="week">week</label><br />
+            <input type="number" id="week" name="week" value="" />
+          </div>
+          <div class="box">
+            <label for="year">year</label><br />
+            <input type="number" id="year" name="year" value="" />
+          </div>
         </div>
-      </nav>
-    </header>
-
-    <section class="title">
-      <div>Time</div>
-    </section>
-
-    <main class="main">
-      <section class="main-container">
-        <div class="left-container">
-          <my-nav></my-nav>
+      </main>
+      <footer class="footer">
+        <div class="copyright">
+          Copyright &copy; 2022
+          <a target="_blank" href="https://zedchamaa.com/">zedchamaa.com</a>
         </div>
-        <div class="right-container">
-          <table>
-            <tr class="row">
-              <td></td>
-              <td><clear-all></clear-all></td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">day <span>day</span></div>
-              </td>
-              <td>
-                <div><input type="number" id="day" name="day" value="" /></div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">hour <span>hour</span></div>
-              </td>
-              <td>
-                <div>
-                  <input type="number" id="hour" name="hour" value="" />
-                </div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">min <span>minute</span></div>
-              </td>
-              <td>
-                <div>
-                  <input type="number" id="minute" name="minute" value="" />
-                </div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">sec <span>second</span></div>
-              </td>
-              <td>
-                <div>
-                  <input type="number" id="second" name="second" value="" />
-                </div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">week <span>week</span></div>
-              </td>
-              <td>
-                <div>
-                  <input type="number" id="week" name="week" value="" />
-                </div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">year <span>year</span></div>
-              </td>
-              <td>
-                <div>
-                  <input type="number" id="year" name="year" value="" />
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-      </section>
-    </main>
-
-    <my-footer></my-footer>
+      </footer>
+    </div>
   </body>
 </html>
