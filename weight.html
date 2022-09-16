@@ -19,119 +19,74 @@
     <title>Unit Converter - Weight</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <a class="nav-branding" href="/index.html">Converter</a>
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="/index.html" class="nav-link">Currency</a>
-          </li>
-          <li class="nav-item">
-            <a href="/temperature.html" class="nav-link">Temperature</a>
-          </li>
-          <li class="nav-item">
-            <a href="/volume.html" class="nav-link">Volume</a>
-          </li>
-          <li class="nav-item">
-            <a href="/weight.html" class="nav-link">Weight</a>
-          </li>
-          <li class="nav-item">
-            <a href="/time.html" class="nav-link">Time</a>
-          </li>
-        </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+    <div class="container">
+      <header class="header">
+        <nav class="navbar">
+          <a class="nav-branding" href="/index.html">Converter</a>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="/index.html" class="nav-link">Currency</a>
+            </li>
+            <li class="nav-item">
+              <a href="/temperature.html" class="nav-link">Temperature</a>
+            </li>
+            <li class="nav-item">
+              <a href="/volume.html" class="nav-link">Volume</a>
+            </li>
+            <li class="nav-item">
+              <a href="/weight.html" class="nav-link">Weight</a>
+            </li>
+            <li class="nav-item">
+              <a href="/time.html" class="nav-link">Time</a>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </header>
+      <main class="main">
+        <div class="converter-container">
+          <div class="page-heading">
+            <h1>Weight Conversion</h1>
+            <div class="clear-button">
+              <button class="clear-all">Clear all</button>
+            </div>
+          </div>
+          <div class="box">
+            <label for="kilogram">kilogram (kg)</label><br />
+            <input type="number" id="kilogram" name="kilogram" value="" />
+          </div>
+          <div class="box">
+            <label for="gram">gram (g)</label><br />
+            <input type="number" id="gram" name="gram" value="" />
+          </div>
+          <div class="box">
+            <label for="milligram">milligram (mg)</label><br />
+            <input type="number" id="milligram" name="milligram" value="" />
+          </div>
+          <div class="box">
+            <label for="pound">pound (lb)</label><br />
+            <input type="number" id="pound" name="pound" value="" />
+          </div>
+          <div class="box">
+            <label for="ounce">ounce (oz)</label><br />
+            <input type="number" id="ounce" name="ounce" value="" />
+          </div>
+          <div class="box">
+            <label for="stone">stone (st)</label><br />
+            <input type="number" id="stone" name="stone" value="" />
+          </div>
         </div>
-      </nav>
-    </header>
-
-    <section class="title">
-      <div>Weight</div>
-    </section>
-
-    <main class="main">
-      <section class="main-container">
-        <div class="left-container">
-          <my-nav></my-nav>
+      </main>
+      <footer class="footer">
+        <div class="copyright">
+          Copyright &copy; 2022
+          <a target="_blank" href="https://zedchamaa.com/">zedchamaa.com</a>
         </div>
-        <div class="right-container">
-          <table>
-            <tr class="row">
-              <td></td>
-              <td><clear-all></clear-all></td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">kg <span>Kilogram</span></div>
-              </td>
-              <td>
-                <div>
-                  <input type="number" id="kilogram" name="kilogram" value="" />
-                </div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">g <span>Gram</span></div>
-              </td>
-              <td>
-                <div>
-                  <input type="number" id="gram" name="gram" value="" />
-                </div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">mg <span>Milligram</span></div>
-              </td>
-              <td>
-                <div>
-                  <input
-                    type="number"
-                    id="milligram"
-                    name="milligram"
-                    value=""
-                  />
-                </div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">lb <span>Pound</span></div>
-              </td>
-              <td>
-                <div>
-                  <input type="number" id="pound" name="pound" value="" />
-                </div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">oz <span>Ounce</span></div>
-              </td>
-              <td>
-                <div>
-                  <input type="number" id="ounce" name="ounce" value="" />
-                </div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">st <span>Stone</span></div>
-              </td>
-              <td>
-                <div>
-                  <input type="number" id="stone" name="stone" value="" />
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-      </section>
-    </main>
-
-    <my-footer></my-footer>
+      </footer>
+    </div>
   </body>
 </html>
