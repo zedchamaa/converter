@@ -22,128 +22,92 @@
     <title>Unit Converter - Currency</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <a class="nav-branding" href="/index.html">Unit Converter</a>
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="/index.html" class="nav-link">Currency</a>
-          </li>
-          <li class="nav-item">
-            <a href="/temperature.html" class="nav-link">Temperature</a>
-          </li>
-          <li class="nav-item">
-            <a href="/volume.html" class="nav-link">Volume</a>
-          </li>
-          <li class="nav-item">
-            <a href="/weight.html" class="nav-link">Weight</a>
-          </li>
-          <li class="nav-item">
-            <a href="/time.html" class="nav-link">Time</a>
-          </li>
-        </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+    <div class="container">
+      <header class="header">
+        <nav class="navbar">
+          <a class="nav-branding" href="/index.html">Converter</a>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="/index.html" class="nav-link">Currency</a>
+            </li>
+            <li class="nav-item">
+              <a href="/temperature.html" class="nav-link">Temperature</a>
+            </li>
+            <li class="nav-item">
+              <a href="/volume.html" class="nav-link">Volume</a>
+            </li>
+            <li class="nav-item">
+              <a href="/weight.html" class="nav-link">Weight</a>
+            </li>
+            <li class="nav-item">
+              <a href="/time.html" class="nav-link">Time</a>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </header>
+      <main class="main">
+        <div class="converter-container">
+          <div class="page-heading">
+            <h1>Currency Conversion</h1>
+            <p class="notice">
+              rates are sourced from
+              <a target="_blank" href="https://exchangerate.host/#/"
+                >exchangerate.host</a
+              >
+            </p>
+            <div class="clear-button">
+              <button class="clear-all">Clear all</button>
+            </div>
+          </div>
+          <div class="box">
+            <label for="usd">us dollar ($)</label><br />
+            <input type="number" id="usd" name="usd" value="" />
+          </div>
+          <div class="box">
+            <label for="eur">euro (€)</label><br />
+            <input type="number" id="eur" name="eur" value="" />
+          </div>
+          <div class="box">
+            <label for="jpy">japanese yen (JPY)</label><br />
+            <input type="number" id="jpy" name="jpy" value="" />
+          </div>
+          <div class="box">
+            <label for="gbp">pound sterling (£)</label><br />
+            <input type="number" id="gbp" name="gbp" value="" />
+          </div>
+          <div class="box">
+            <label for="aud">australian dollar (AUD)</label><br />
+            <input type="number" id="aud" name="aud" value="" />
+          </div>
+          <div class="box">
+            <label for="chf">swiss franc (CHF)</label><br />
+            <input type="number" id="chf" name="chf" value="" />
+          </div>
+          <div class="box">
+            <label for="cny">chinese renminbi (CNY)</label><br />
+            <input type="number" id="cny" name="cny" value="" />
+          </div>
+          <div class="box">
+            <label for="sek">swedish krona (SEK)</label><br />
+            <input type="number" id="sek" name="sek" value="" />
+          </div>
+          <div class="box">
+            <label for="nzd">new zealand dollar (NZD)</label><br />
+            <input type="number" id="nzd" name="nzd" value="" />
+          </div>
         </div>
-      </nav>
-    </header>
-    <main class="main">
-      <section class="main-container">
-        <div class="left-container">
-          <my-nav></my-nav>
+      </main>
+      <footer class="footer">
+        <div class="copyright">
+          Copyright &copy; 2022
+          <a target="_blank" href="https://zedchamaa.com/">zedchamaa.com</a>
         </div>
-        <div class="right-container">
-          <table>
-            <tr class="row">
-              <td></td>
-              <td><clear-all></clear-all></td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">$ <span>us dollar</span></div>
-              </td>
-              <td>
-                <div><input type="number" id="usd" name="usd" value="" /></div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">€ <span>euro</span></div>
-              </td>
-              <td>
-                <div><input type="number" id="eur" name="eur" value="" /></div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">JPY <span>japanese yen</span></div>
-              </td>
-              <td>
-                <div><input type="number" id="jpy" name="jpy" value="" /></div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">£ <span>pound sterling</span></div>
-              </td>
-              <td>
-                <div><input type="number" id="gbp" name="gbp" value="" /></div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">AUD <span>australian dollar</span></div>
-              </td>
-              <td>
-                <div><input type="number" id="aud" name="aud" value="" /></div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">CAD <span>canadian dollar</span></div>
-              </td>
-              <td>
-                <div><input type="number" id="cad" name="cad" value="" /></div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">CHF <span>swiss franc</span></div>
-              </td>
-              <td>
-                <div><input type="number" id="chf" name="chf" value="" /></div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">CNY <span>chinese renminbi</span></div>
-              </td>
-              <td>
-                <div><input type="number" id="cny" name="cny" value="" /></div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">SEK <span>swedish krona</span></div>
-              </td>
-              <td>
-                <div><input type="number" id="sek" name="sek" value="" /></div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">NZD <span>new zealand dollar</span></div>
-              </td>
-              <td>
-                <div><input type="number" id="nzd" name="nzd" value="" /></div>
-              </td>
-            </tr>
-          </table>
-        </div>
-      </section>
-    </main>
-    <footer></footer>
+      </footer>
+    </div>
   </body>
 </html>
