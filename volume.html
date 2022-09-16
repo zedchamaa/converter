@@ -19,109 +19,71 @@
     <title>Unit Converter - Volume</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <a class="nav-branding" href="/index.html">Converter</a>
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="/index.html" class="nav-link">Currency</a>
-          </li>
-          <li class="nav-item">
-            <a href="/temperature.html" class="nav-link">Temperature</a>
-          </li>
-          <li class="nav-item">
-            <a href="/volume.html" class="nav-link">Volume</a>
-          </li>
-          <li class="nav-item">
-            <a href="/weight.html" class="nav-link">Weight</a>
-          </li>
-          <li class="nav-item">
-            <a href="/time.html" class="nav-link">Time</a>
-          </li>
-        </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+    <div class="container">
+      <header class="header">
+        <nav class="navbar">
+          <a class="nav-branding" href="/index.html">Converter</a>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="/index.html" class="nav-link">Currency</a>
+            </li>
+            <li class="nav-item">
+              <a href="/temperature.html" class="nav-link">Temperature</a>
+            </li>
+            <li class="nav-item">
+              <a href="/volume.html" class="nav-link">Volume</a>
+            </li>
+            <li class="nav-item">
+              <a href="/weight.html" class="nav-link">Weight</a>
+            </li>
+            <li class="nav-item">
+              <a href="/time.html" class="nav-link">Time</a>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </header>
+      <main class="main">
+        <div class="converter-container">
+          <div class="page-heading">
+            <h1>Volume Conversion</h1>
+            <div class="clear-button">
+              <button class="clear-all">Clear all</button>
+            </div>
+          </div>
+          <div class="box">
+            <label for="cubic-meter">cubic meter</label><br />
+            <input type="number" id="cubic-meter" name="cubic-meter" value="" />
+          </div>
+          <div class="box">
+            <label for="liter">liter (cubic dm)</label><br />
+            <input type="number" id="liter" name="liter" value="" />
+          </div>
+          <div class="box">
+            <label for="cubic-centimeter">cubic cm (cc)</label><br />
+            <input
+              type="number"
+              id="cubic-centimeter"
+              name="cubic-centimeter"
+              value=""
+            />
+          </div>
+          <div class="box">
+            <label for="milliliter">milliliter (ml, mil)</label><br />
+            <input type="number" id="milliliter" name="milliliter" value="" />
+          </div>
         </div>
-      </nav>
-    </header>
-
-    <section class="title">
-      <div>Volume</div>
-    </section>
-
-    <main class="main">
-      <section class="main-container">
-        <div class="left-container">
-          <my-nav></my-nav>
+      </main>
+      <footer class="footer">
+        <div class="copyright">
+          Copyright &copy; 2022
+          <a target="_blank" href="https://zedchamaa.com/">zedchamaa.com</a>
         </div>
-        <div class="right-container">
-          <table>
-            <tr class="row">
-              <td></td>
-              <td><clear-all></clear-all></td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">&#13221; <span>Cubic meter</span></div>
-              </td>
-              <td>
-                <div>
-                  <input
-                    type="number"
-                    id="cubic-meter"
-                    name="cubic-meter"
-                    value=""
-                  />
-                </div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">l <span>Liter (cubic dm)</span></div>
-              </td>
-              <td>
-                <div>
-                  <input type="number" id="liter" name="liter" value="" />
-                </div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">cc (&#13220;) <span>cc (cubic cm)</span></div>
-              </td>
-              <td>
-                <div>
-                  <input
-                    type="number"
-                    id="cubic-centimeter"
-                    name="cubic-centimeter"
-                    value=""
-                  />
-                </div>
-              </td>
-            </tr>
-            <tr class="row">
-              <td>
-                <div class="unit">ml <span>Milliliter (ml, mil)</span></div>
-              </td>
-              <td>
-                <div>
-                  <input
-                    type="number"
-                    id="milliliter"
-                    name="milliliter"
-                    value=""
-                  />
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-      </section>
-    </main>
-
-    <my-footer></my-footer>
+      </footer>
+    </div>
   </body>
 </html>
