@@ -40,18 +40,20 @@ input[type=number] {
 }
 
 .converter-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 800px;
-  height: auto;
-  margin: 30px 0;
-  padding: 15px 0;
-  gap: 10px;
+  display: grid;
+  grid-template: 225px 150px 150px / repeat(2, 1fr);
+  grid-template-areas: 
+   "title title"
+   "conversion conversion";
+   grid-auto-rows: 150px;
+   justify-items: center;
+   padding-top: 40px;
 }
 
 .page-heading {
   margin-bottom: 20px;
+  grid-area: title;
+  text-align: center;
 }
 
 .notice {
@@ -218,5 +220,17 @@ a {
   .nav-menu.active {
     left: 0;
   }
+
+  .converter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  height: auto;
+  margin: 30px 0;
+  padding: 15px 0;
+  gap: 10px;
+  }
+
 }
 
