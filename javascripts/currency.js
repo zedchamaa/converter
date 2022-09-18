@@ -16,7 +16,7 @@ function convertCurrency(amount, originCurrency, targetCurrency) {
 
     // calculate the total conversion value based on user input
     let totalConversion = amount * conversion;
-    totalConversion = Number(totalConversion.toFixed(4));
+    totalConversion = Number(totalConversion.toFixed(2));
 
     // update the target currency with the appropriate conversion value
     const element = document.getElementById(targetCurrency.toLowerCase());
