@@ -24,6 +24,28 @@ function convertCurrency(amount, originCurrency, targetCurrency) {
   }
 }
 
+// ========== CONVERSIONS FROM BTC TO OTHER CURRENCIES ========== //
+
+// Trigger the convert from BTC functions upon data input
+const btcElement = document.getElementById("btc");
+btcElement.addEventListener('input', (event) => { 
+const { target } = event;
+let amount = target.value;
+amount = Number(amount);
+
+// Convert from BTC to other currencies
+convertCurrency(amount,'BTC','USD');
+convertCurrency(amount,'BTC','EUR');
+convertCurrency(amount,'BTC','JPY');
+convertCurrency(amount,'BTC','GBP');
+convertCurrency(amount,'BTC','AUD');
+convertCurrency(amount,'BTC','CAD');
+convertCurrency(amount,'BTC','CHF');
+convertCurrency(amount,'BTC','CNY');
+convertCurrency(amount,'BTC','SEK');
+convertCurrency(amount,'BTC','NZD');
+});
+
 // ========== CONVERSIONS FROM USD TO OTHER CURRENCIES ========== //
 
 // Trigger the convert from USD functions upon data input
@@ -34,6 +56,7 @@ let amount = target.value;
 amount = Number(amount);
 
 // Convert from USD to other currencies
+convertCurrency(amount,'USD','BTC');
 convertCurrency(amount,'USD','EUR');
 convertCurrency(amount,'USD','JPY');
 convertCurrency(amount,'USD','GBP');
@@ -55,6 +78,7 @@ let amount = target.value;
 amount = Number(amount);
 
 // Convert from EUR to other currencies
+convertCurrency(amount,'EUR','BTC');
 convertCurrency(amount,'EUR','USD');
 convertCurrency(amount,'EUR','JPY');
 convertCurrency(amount,'EUR','GBP');
@@ -76,6 +100,7 @@ let amount = target.value;
 amount = Number(amount);
 
 // Convert from JPY to other currencies
+convertCurrency(amount,'JPY','BTC');
 convertCurrency(amount,'JPY','USD');
 convertCurrency(amount,'JPY','EUR');
 convertCurrency(amount,'JPY','GBP');
@@ -97,6 +122,7 @@ let amount = target.value;
 amount = Number(amount);
 
 // Convert from GBP to other currencies
+convertCurrency(amount,'GBP','BTC');
 convertCurrency(amount,'GBP','USD');
 convertCurrency(amount,'GBP','EUR');
 convertCurrency(amount,'GBP','JPY');
@@ -118,6 +144,7 @@ let amount = target.value;
 amount = Number(amount);
 
 // Convert from AUD to other currencies
+convertCurrency(amount,'AUD','BTC');
 convertCurrency(amount,'AUD','USD');
 convertCurrency(amount,'AUD','EUR');
 convertCurrency(amount,'AUD','JPY');
@@ -139,6 +166,7 @@ let amount = target.value;
 amount = Number(amount);
 
 // Convert from CHF to other currencies
+convertCurrency(amount,'CHF','BTC');
 convertCurrency(amount,'CHF','USD');
 convertCurrency(amount,'CHF','EUR');
 convertCurrency(amount,'CHF','JPY');
@@ -160,6 +188,7 @@ let amount = target.value;
 amount = Number(amount);
 
 // Convert from CNY to other currencies
+convertCurrency(amount,'CNY','BTC');
 convertCurrency(amount,'CNY','USD');
 convertCurrency(amount,'CNY','EUR');
 convertCurrency(amount,'CNY','JPY');
@@ -181,6 +210,7 @@ let amount = target.value;
 amount = Number(amount);
 
 // Convert from SEK to other currencies
+convertCurrency(amount,'SEK','BTC');
 convertCurrency(amount,'SEK','USD');
 convertCurrency(amount,'SEK','EUR');
 convertCurrency(amount,'SEK','JPY');
@@ -202,6 +232,7 @@ let amount = target.value;
 amount = Number(amount);
 
 // Convert from NZD to other currencies
+convertCurrency(amount,'NZD','BTC');
 convertCurrency(amount,'NZD','USD');
 convertCurrency(amount,'NZD','EUR');
 convertCurrency(amount,'NZD','JPY');
