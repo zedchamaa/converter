@@ -44,6 +44,7 @@ convertCurrency(amount,'BTC','CHF');
 convertCurrency(amount,'BTC','CNY');
 convertCurrency(amount,'BTC','SEK');
 convertCurrency(amount,'BTC','NZD');
+convertCurrency(amount,'BTC','ZAR');
 });
 
 // ========== CONVERSIONS FROM USD TO OTHER CURRENCIES ========== //
@@ -66,6 +67,7 @@ convertCurrency(amount,'USD','CHF');
 convertCurrency(amount,'USD','CNY');
 convertCurrency(amount,'USD','SEK');
 convertCurrency(amount,'USD','NZD');
+convertCurrency(amount,'USD','ZAR');
 });
 
 // ========== CONVERSIONS FROM EUR TO OTHER CURRENCIES ========== //
@@ -88,6 +90,7 @@ convertCurrency(amount,'EUR','CHF');
 convertCurrency(amount,'EUR','CNY');
 convertCurrency(amount,'EUR','SEK');
 convertCurrency(amount,'EUR','NZD');
+convertCurrency(amount,'EUR','ZAR');
 });
 
 // ========== CONVERSIONS FROM JPY TO OTHER CURRENCIES ========== //
@@ -110,6 +113,7 @@ convertCurrency(amount,'JPY','CHF');
 convertCurrency(amount,'JPY','CNY');
 convertCurrency(amount,'JPY','SEK');
 convertCurrency(amount,'JPY','NZD');
+convertCurrency(amount,'JPY','ZAR');
 });
 
 // ========== CONVERSIONS FROM GBP TO OTHER CURRENCIES ========== //
@@ -132,6 +136,7 @@ convertCurrency(amount,'GBP','CHF');
 convertCurrency(amount,'GBP','CNY');
 convertCurrency(amount,'GBP','SEK');
 convertCurrency(amount,'GBP','NZD');
+convertCurrency(amount,'GBP','ZAR');
 });
 
 // ========== CONVERSIONS FROM AUD TO OTHER CURRENCIES ========== //
@@ -154,6 +159,7 @@ convertCurrency(amount,'AUD','CHF');
 convertCurrency(amount,'AUD','CNY');
 convertCurrency(amount,'AUD','SEK');
 convertCurrency(amount,'AUD','NZD');
+convertCurrency(amount,'AUD','ZAR');
 });
 
 // ========== CONVERSIONS FROM CAD TO OTHER CURRENCIES ========== //
@@ -176,6 +182,7 @@ convertCurrency(amount,'CAD','CHF');
 convertCurrency(amount,'CAD','CNY');
 convertCurrency(amount,'CAD','SEK');
 convertCurrency(amount,'CAD','NZD');
+convertCurrency(amount,'CAD','ZAR');
 });
 
 // ========== CONVERSIONS FROM CHF TO OTHER CURRENCIES ========== //
@@ -198,6 +205,7 @@ convertCurrency(amount,'CHF','CAD');
 convertCurrency(amount,'CHF','CNY');
 convertCurrency(amount,'CHF','SEK');
 convertCurrency(amount,'CHF','NZD');
+convertCurrency(amount,'CHF','ZAR');
 });
 
 // ========== CONVERSIONS FROM CNY TO OTHER CURRENCIES ========== //
@@ -220,6 +228,7 @@ convertCurrency(amount,'CNY','CAD');
 convertCurrency(amount,'CNY','CHF');
 convertCurrency(amount,'CNY','SEK');
 convertCurrency(amount,'CNY','NZD');
+convertCurrency(amount,'CNY','ZAR');
 });
 
 // ========== CONVERSIONS FROM SEK TO OTHER CURRENCIES ========== //
@@ -242,6 +251,7 @@ convertCurrency(amount,'SEK','CAD');
 convertCurrency(amount,'SEK','CHF');
 convertCurrency(amount,'SEK','CNY');
 convertCurrency(amount,'SEK','NZD');
+convertCurrency(amount,'SEK','ZAR');
 });
 
 // ========== CONVERSIONS FROM NZD TO OTHER CURRENCIES ========== //
@@ -264,4 +274,28 @@ convertCurrency(amount,'NZD','CAD');
 convertCurrency(amount,'NZD','CHF');
 convertCurrency(amount,'NZD','CNY');
 convertCurrency(amount,'NZD','SEK');
+convertCurrency(amount,'NZD','ZAR');
+});
+
+// ========== CONVERSIONS FROM ZAR TO OTHER CURRENCIES ========== //
+
+// Trigger the convert from ZAR functions upon data input
+const zarElement = document.getElementById("zar");
+zarElement.addEventListener('input', (event) => { 
+const { target } = event;
+let amount = target.value;
+amount = Number(amount);
+
+// Convert from ZAR to other currencies
+convertCurrency(amount,'ZAR','BTC');
+convertCurrency(amount,'ZAR','USD');
+convertCurrency(amount,'ZAR','EUR');
+convertCurrency(amount,'ZAR','JPY');
+convertCurrency(amount,'ZAR','GBP');
+convertCurrency(amount,'ZAR','AUD');
+convertCurrency(amount,'ZAR','CAD');
+convertCurrency(amount,'ZAR','CHF');
+convertCurrency(amount,'ZAR','CNY');
+convertCurrency(amount,'ZAR','SEK');
+convertCurrency(amount,'ZAR','NZD');
 });
