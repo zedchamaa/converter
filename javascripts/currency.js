@@ -156,6 +156,28 @@ convertCurrency(amount,'AUD','SEK');
 convertCurrency(amount,'AUD','NZD');
 });
 
+// ========== CONVERSIONS FROM CAD TO OTHER CURRENCIES ========== //
+
+// Trigger the convert from CAD functions upon data input
+const cadElement = document.getElementById("cad");
+cadElement.addEventListener('input', (event) => { 
+const { target } = event;
+let amount = target.value;
+amount = Number(amount);
+
+// Convert from CAD to other currencies
+convertCurrency(amount,'CAD','BTC');
+convertCurrency(amount,'CAD','USD');
+convertCurrency(amount,'CAD','EUR');
+convertCurrency(amount,'CAD','JPY');
+convertCurrency(amount,'CAD','GBP');
+convertCurrency(amount,'CAD','AUD');
+convertCurrency(amount,'CAD','CHF');
+convertCurrency(amount,'CAD','CNY');
+convertCurrency(amount,'CAD','SEK');
+convertCurrency(amount,'CAD','NZD');
+});
+
 // ========== CONVERSIONS FROM CHF TO OTHER CURRENCIES ========== //
 
 // Trigger the convert from CHF functions upon data input
