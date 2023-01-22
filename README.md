@@ -1,11 +1,10 @@
-Use this converter app to convert:
+<h1>Converter</h1>
 
-- Currencies (10 most popular)
-- Temperature
-- Volume
-- Weight
-- Time
+<p>A front-end web application to quickly convert the top 12 currencies, including Bitcoin. You can also convert temperature, volume, weight and time units. Built with JavaScript, API, HTML and CSS.</p>
 
-Visit the website at https://converter.zedchamaa.com/
+<img src="https://www.zedchamaa.com/assets/images/computer-tablet-mobile-placeholder.png">
 
-<img width="750px" src="https://github.com/zedchamaa/converter/blob/main/assets/images/unit-converter.png">
+<p><strong>Visit Site:</strong> <a target="_blank" href="https://converter.zedchamaa.com/">Converter Web App</a></p>
+
+<p><strong>Visit Portfolio:</strong> <a target="_
+blank" href="https://zedchamaa.com/">Front End Developer Portfolio - ZED CHAMAA</a></p>
